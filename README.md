@@ -1,4 +1,4 @@
-# AzureLearningJourney
+# AzureLearnJourney
 Azure Learn-ing Journey
 
 ### Economies of scale
