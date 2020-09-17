@@ -1,5 +1,15 @@
 # AzureLearnJourney
-Azure Learn-ing Journey
+Azure Learn-ing Journey: https://docs.microsoft.com/en-gb/learn/certifications/exams/az-900?wt.mc_id=learningredirect_certs-web-wwl
+
+Explore Microsoft Azure cloud concepts (AZ-900) 
+
+Distinguish Microsoft Azure Core Services (AZ-900)
+
+Examine Microsoft Azure security, privacy, compliance, and trust (AZ-900)
+
+Review Microsoft Azure pricing, service level agreements, and lifecycles (AZ-900)
+
+---
 
 ### Economies of scale
 
