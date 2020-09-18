@@ -1,15 +1,17 @@
 # AzureLearnJourney
 Azure Learn-ing Journey: https://docs.microsoft.com/en-gb/learn/certifications/exams/az-900?wt.mc_id=learningredirect_certs-web-wwl
 
-Explore Microsoft Azure cloud concepts (AZ-900) 
+LEARNING PATH 1: Explore Microsoft Azure cloud concepts (AZ-900) 
 
-Distinguish Microsoft Azure Core Services (AZ-900)
+LEARNING PATH 2: Distinguish Microsoft Azure Core Services (AZ-900)
 
-Examine Microsoft Azure security, privacy, compliance, and trust (AZ-900)
+LEARNING PATH 3: Examine Microsoft Azure security, privacy, compliance, and trust (AZ-900)
 
-Review Microsoft Azure pricing, service level agreements, and lifecycles (AZ-900)
+LEARNING PATH 4: Review Microsoft Azure pricing, service level agreements, and lifecycles (AZ-900)
 
 ---
+
+## LEARNING PATH 1: Explore Microsoft Azure cloud concepts (AZ-900) 
 
 ### Economies of scale
 
@@ -37,12 +39,81 @@ Data Centers -> Availability Zones -> Region -> Region Pair -> Geography
 
 Availability Sets – making sure your applications are available during a high impact maintenance event or a hardware failures in a data center. Avoid entire data center unavailability.
 
-* Update Domains – Logical separations within Servers for rolling out updates sequentially
-* Fault Domains – Physical separation of Server racks with independent cooling, power, networking
+- Update Domains – Logical separations within Servers for rolling out updates sequentially
+- Fault Domains – Physical separation of Server racks with independent cooling, power, networking
 
 Availability Zones – physically separated data center zones within a Region.
 
-* Each Zone could have one or more data centers.
-* Each Region has at least 3 Availability Zones.
-* Zonal Services – you pin your Resource to a Zone (VMs)
-* Zone Redundant Services – Resource auto replicates itself in Zones (SQL DB)
+- Each Zone could have one or more data centers.
+- Each Region has at least 3 Availability Zones.
+- Zonal Services – you pin your Resource to a Zone (VMs)
+- Zone Redundant Services – Resource auto replicates itself in Zones (SQL DB)
+
+---
+
+## LEARNING PATH 2: Distinguish Microsoft Azure Core Services (AZ-900)
+
+### Azure Compute Services
+
+- Virtual Machines – Physical emulation of a Computer in Cloud
+- Virtual Machine Scale Set – Set of identical VMs, true autoscaled
+- App Service – Fully managed platform for hosting Apps
+- Azure Functions – Execute code in response to an event, trigger, timer or message
+
+### Container Services
+
+- Maintaining multiple instances of an application in a single host machine
+- Orchestrator manages the instances
+
+Orchestration – managing large number of Containers
+
+- Azure Container Instances
+- Azure Kubernetes Service
+
+Containers are used to implement Microservices Architecture.
+
+- Breaking your application into small independent pieces
+- Such as a website -> UI module, Backend module, Database module
+
+### Azure Networking Services
+
+- Azure Virtual Networks – Secure Networking with Azure Resources, Internet and On-Premise
+- Azure Load Balancer – Balance inbound and outbound Network traffic in Azure.
+- Azure Virtual Private Network (VPN) Gateway – Encrypted traffic between Azure and On-Premise
+- Azure Application Gateway – Web traffic load balancer, also provides a Firewall
+- Content Delivery Network – Geo-distributed network for hosting Content
+
+### Data Categories
+
+- Structured Data – Relational data
+- Semi-Structured Data – Non-relational, noSQL data
+- Unstructured Data – No structure, PDF, Images, Videos Files
+
+### Azure Storage Services
+
+- Disk Storage – for VMs, only access from VM, available in SSDs, HDDs
+- Containers (Blobs) – unstructured binary data, documents, images, video, back ups
+- Files – network file shares for VMs, access from web with auth token
+- Queues – storing messages for asynchronous processing, 64KB size each
+- Tables – storing structured, noSQL data, non-relational data
+
+### Azure Database Services
+
+- Azure Cosmos DB – globally distributed noSQL database
+- Azure SQL Server – the latest stable version of MS SQL Server
+- Azure Database Migration – migrating databases to Azure, no downtime.
+
+### Azure Marketplace
+
+Microsoft Partners, 3rd party vendors publish their customised offerings, solutions and services on top of Azure services.
+
+### Internet of Things
+
+- Azure IoT Central – SaaS solution for connect, monitor, and manage IoT devices
+- Azure IoT Hub – central message hub for bi-directional communication between IoT devices and your application. Device to Cloud and Cloud to Device.
+
+### Big data and Analysis
+
+- Azure Synapse Analytics- limitless analytics service (formerly Azure Data Warehouse)
+- Azure HDInsight – open source analytics service on top of azure
+- Azure Data Lake Analytics – on demand analytics job service based on query execution
