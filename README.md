@@ -118,3 +118,53 @@ Microsoft Partners, 3rd party vendors publish their customised offerings, soluti
 - Azure Synapse Analytics- limitless analytics service (formerly Azure Data Warehouse)
 - Azure HDInsight – open source analytics service on top of azure
 - Azure Data Lake Analytics – on demand analytics job service based on query execution
+
+### Azure Artificial Intelligence
+
+Forecasting future behaviors, outcomes and trends using Machine Learning…
+
+Azure Cognitive Services – Domain specific pre-trained AI models: Vision, Speech, Language, Knowledge, and Search
+
+### Azure Machine Learning
+
+Easily generating machine leaning models with high efficiency and accuracy…
+
+### Serverless computing
+
+- Azure Functions – execute code based on event, request, trigger or message
+- Azure Logic Apps – automate and orchestrate tasks
+- Azure Event Grid – build applications with event-based architectures
+
+###  Azure DevOps
+
+Development Operations brings people + process + technology together for automating delivery of software.
+
+- Azure DevOps Services – DevOps tools – pipelines, repositories, kanban boards, automated testing
+- Azure Lab Services – quick pre-provisioned environments for testing, test agents, integrate with pipelines
+
+### Azure App Service
+
+build and host web apps, mobile back ends, and RESTful APIs regardless of programming language and framework on Windows and Linux environments. 
+
+Web Apps, Mobile Apps, API Apps, and Logic Apps
+
+### Azure Management Tools
+
+- Azure Portal – dashboard, high level view, wizards for creating resources
+- Azure PowerShell – based on Windows PowerShell, execute Azure specific commands
+- Azure Command Line Interface (CLI) – cross platform command line
+- Azure Cloud Shell – web browser based command line, needs a Storage Account
+- Azure Mobile App – iOS/Android phones/devices, cannot create, but monitor and manage
+- Azure REST API – REST API endpoints for create, retrieve, update delete resources
+
+### Azure Advisor
+
+provides recommendations for high-availability, security, performance and cost management for your resources.
+
+
+---
+
+## LEARNING PATH 3: Examine Microsoft Azure security, privacy, compliance, and trust (AZ-900)
+
+WIP
+
