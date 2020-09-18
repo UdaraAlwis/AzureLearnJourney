@@ -1,5 +1,6 @@
 # AzureLearnJourney
-Azure Learn-ing Journey: https://docs.microsoft.com/en-gb/learn/certifications/exams/az-900?wt.mc_id=learningredirect_certs-web-wwl
+
+Azure Learn-ing Journey: https://docs.microsoft.com/en-gb/learn/certifications/exams/az-900
 
 LEARNING PATH 1: Explore Microsoft Azure cloud concepts (AZ-900) 
 
@@ -112,7 +113,7 @@ Microsoft Partners, 3rd party vendors publish their customised offerings, soluti
 - Azure IoT Central – SaaS solution for connect, monitor, and manage IoT devices
 - Azure IoT Hub – central message hub for bi-directional communication between IoT devices and your application. Device to Cloud and Cloud to Device.
 
-### Big data and Analysis
+### Big Data and Analysis
 
 - Azure Synapse Analytics- limitless analytics service (formerly Azure Data Warehouse)
 - Azure HDInsight – open source analytics service on top of azure
