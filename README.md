@@ -220,11 +220,45 @@ Perimeter Layer - Use Azure DDoS Protection and Azure Firewall.
 
 Network Layer – Use NSG, limiting network traffic, only allowed what is required, nothing else.
 
-### Combined Services
+### Combining Azure Security Services for better solutions
 
 Create multiple layers of security by combining multiple security services in Azure. 
-Ex: NSG + Azure Firewall or Azure App Gateway + Azure Firewall
 
+Ex: 
+- NSG + Azure Firewall 
+- Azure App Gateway + Azure Firewall
+
+### Azure Core Identitity Services
+
+- Authentication – (Check identity with legitimate credentials) Establishes if they are, who they say they are…
+- Authorization – (Check the level of access) Establishes what is allowed and what they can do with it…
+
+### Azure Active Directory 
+
+Cloud based Identity and Access Management for internal (intranet apps, organization apps, etc) or external (Office 365, Azure Portal, etc) resources of the company.
+
+- Authentication – identity verification, password reset, multi factor auth (MFA)
+- Single Sign-On – Single login, but access multiple applications, simplifying security model
+- Application Management – Manage cloud and on-premise apps
+- Business to Business – (B2B) managing business partners access
+- Business to Consumer – (B2C) managing your customers access
+- Device Management – Manage how devices access data
+
+### Single Sign-On
+
+- More identities per user -> more complexity -> more difficult to manage -> and more risky!
+- But Single Sign-On: Easy to maintain (ex: password reset, disable access) when authentication is unified.
+- One Identity, tied to One User, access to multiple applications granted.
+- Azure AD: synchronise with on-premise AD
+- Azure AD: threat analysis, and real time identity protection
+
+### Azure Multi-Factor Authentication (MFA)
+
+Limits the impact in case of a credential exposure.
+
+- Something you know – security question
+- Something you possess – mobile device, token device
+- Something you are – biometric, fingerprint, face, eye
 
 
 
