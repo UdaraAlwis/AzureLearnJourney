@@ -14,6 +14,8 @@ LEARNING PATH 4: Review Microsoft Azure pricing, service level agreements, and l
 
 ## LEARNING PATH 1: Explore Microsoft Azure cloud concepts (AZ-900) 
 
+### [Discuss why cloud services](https://docs.microsoft.com/en-gb/learn/modules/discuss-why-cloud-services/)
+
 ### Economies of scale
 
 Big corporates purchase in large scale and pass down benefits to their Customers. Reduced costs and with efficiency.
@@ -21,18 +23,29 @@ Big corporates purchase in large scale and pass down benefits to their Customers
 - CapEx – Up front spending on infrastructure such as hardware. (Servers, Storage, Network, Backups, Recovery, Infrastructure, Technical personnel.
 - OpEx – Spending for what is used now ex: use compute from Cloud Service providers. (Leasing Software, Resources, Scaling based on demand, Billing only for usage)
 
+### [Distinguish types of cloud models](https://docs.microsoft.com/en-gb/learn/modules/distinguish-types-cloud-models/)
+
 ### Cloud hosting models
 
 - Public – Cloud infrastructure hosted by a Provider
 - Private – Hosted and owned by company using it for themselves
 - Hybrid – Combination of Public and Private cloud
 
+### [Explore types of cloud services](https://docs.microsoft.com/en-gb/learn/modules/explore-types-cloud-services/)
+
 ### Shared responsibility model
-level of responsibility for the infrastructure between Cloud provider and Customers.
+
+Level of responsibility for the infrastructure between Cloud provider and Customers.
 
 - Infrastructure as a Service (IaaS)  – using infrastructure servers and virtual machines (VMs), storage, networks, and operating systems from a Cloud provider.
 - Platform as a Service (PaaS) – using development and deployment environment from a Cloud provider.
 - Software as a Service (SaaS) – using software that is centrally hosted and managed by a Cloud provider.
+
+---
+
+## LEARNING PATH 2: Distinguish Microsoft Azure Core Services (AZ-900)
+
+### [Discuss core Azure architectural components](https://docs.microsoft.com/en-gb/learn/modules/discuss-core-azure-architectural-components/)
 
 ### Physical architecture of Azure
 
@@ -50,9 +63,7 @@ Availability Zones – physically separated data center zones within a Region.
 - Zonal Services – you pin your Resource to a Zone (VMs)
 - Zone Redundant Services – Resource auto replicates itself in Zones (SQL DB)
 
----
-
-## LEARNING PATH 2: Distinguish Microsoft Azure Core Services (AZ-900)
+### [Define core Azure services and products](https://docs.microsoft.com/en-gb/learn/modules/define-core-azure-services-products/)
 
 ### Azure Compute Services
 
@@ -108,6 +119,8 @@ Containers are used to implement Microservices Architecture.
 
 Microsoft Partners, 3rd party vendors publish their customised offerings, solutions and services on top of Azure services.
 
+### [Identify Azure solutions](https://docs.microsoft.com/en-gb/learn/modules/identify-azure-solutions/)
+
 ### Internet of Things
 
 - Azure IoT Central – SaaS solution for connect, monitor, and manage IoT devices
@@ -161,10 +174,11 @@ Web Apps, Mobile Apps, API Apps, and Logic Apps
 
 provides recommendations for high-availability, security, performance and cost management for your resources.
 
-
 ---
 
 ## LEARNING PATH 3: Examine Microsoft Azure security, privacy, compliance, and trust (AZ-900)
+
+### [Secure network connectivity](https://docs.microsoft.com/en-gb/learn/modules/secure-network-connectivity/)
 
 ### Defence in depth strategy
 
@@ -227,6 +241,8 @@ Create multiple layers of security by combining multiple security services in Az
 Ex: 
 - NSG + Azure Firewall 
 - Azure App Gateway + Azure Firewall
+
+### [Examine core identity services](https://docs.microsoft.com/en-gb/learn/modules/examine-core-identity-services/)
 
 ### Azure Core Identitity Services
 
