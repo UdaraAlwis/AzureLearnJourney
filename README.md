@@ -166,5 +166,65 @@ provides recommendations for high-availability, security, performance and cost m
 
 ## LEARNING PATH 3: Examine Microsoft Azure security, privacy, compliance, and trust (AZ-900)
 
-WIP
+### Defence in depth strategy
+
+CIA - Confidentiality (restricted access), Integrity (prevent unauthorized changes), Availability (always available for authorized users)
+
+### Defence in depth as Layers –
+
+- Physical Security
+- Identity & Access
+- Perimeter
+- Network
+- Compute
+- Application
+- Data
+- Shared security
+
+Cloud Technology -> most of the Security Responsibilities held by the Cloud Provider!
+
+- Still its a shared responsibility with the Customer. 
+- Customer can focus on core business activities.
+- Some services have certain protection built in.
+
+The shared security model varies in different cloud service structures such as IaaS (ex: VMs), PaaS (ex: Web Apps), and SaaS (ex: Office 365) infrastructures.
+
+### Azure Firewall
+
+Cloud based network security service with high availability, scalability, and Azure Monitor logging. Maintains a static public IP address.
+
+### Azure Application Gateway
+
+Also provides a firewall, contains Web Application Firewall, provides similar features
+
+### Azure DDoS Protection
+
+DDoS attacks overwhelm and exhaust publicly reachable web endpoints over the internet. Identifies attackers and block them without interrupting legitimate users.
+
+Two tiers:
+
+- Basic – built into every Azure service
+- Standard – for Azure Virtual Network resources, uses traffic monitoring and machine learning.
+
+### Azure Network Security Groups (NSG)
+
+Filter network traffic between Resources in an Azure Virtual Network, define both inbound and outbound security rules.
+
+### Azure Application Security Groups (ASG)
+
+Filter how network traffic is allowed to move between your applications in Azure. Group similar server applications, ex: web servers, app servers, db servers and define how they’re allowed to communicate.
+
+### Azure Security Solutions for Defence in Depth layers:
+
+Perimeter Layer - Use Azure DDoS Protection and Azure Firewall.
+
+Network Layer – Use NSG, limiting network traffic, only allowed what is required, nothing else.
+
+### Combined Services
+
+Create multiple layers of security by combining multiple security services in Azure. 
+Ex: NSG + Azure Firewall or Azure App Gateway + Azure Firewall
+
+
+
 
