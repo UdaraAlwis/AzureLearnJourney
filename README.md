@@ -161,6 +161,8 @@ build and host web apps, mobile back ends, and RESTful APIs regardless of progra
 
 Web Apps, Mobile Apps, API Apps, and Logic Apps
 
+### [Differentiate Azure management tools](https://docs.microsoft.com/en-gb/learn/modules/differentiate-azure-management-tools/)
+
 ### Azure Management Tools
 
 - Azure Portal – dashboard, high level view, wizards for creating resources
@@ -276,5 +278,6 @@ Limits the impact in case of a credential exposure.
 - Something you possess – mobile device, token device
 - Something you are – biometric, fingerprint, face, eye
 
+### [Review security tools and features](https://docs.microsoft.com/en-gb/learn/modules/review-security-tools-features/)
 
-
+(WIP)
