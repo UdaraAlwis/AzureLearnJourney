@@ -314,6 +314,7 @@ For classifying and protecting your Organization Documents and Emails with Label
 - Track and control the content.
 - Analyse data flows.
 - Detect risky behaviors.
+- Prevent data leakage or misuse
 
 ### Azure Advanced Thread Protection (ATP)
 
