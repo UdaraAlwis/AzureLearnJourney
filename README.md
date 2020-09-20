@@ -326,6 +326,65 @@ Components:
 - ATP sensor – installed in domain controllers, and monitors traffic.
 - ATP cloud service – Azure ATP cloud service runs in Azure infrastructure and connected to Microsoft’s intelligent security graph.
 
-[Describe Azure governance methodologies](https://docs.microsoft.com/en-gb/learn/modules/describe-azure-governance-methodologie/)
+### [Describe Azure governance methodologies](https://docs.microsoft.com/en-gb/learn/modules/describe-azure-governance-methodologie/)
+
+### Azure Policy
+
+Service that lets your create policies for Azure resources, for maintaining standards and compliance. Runs evaluations on resources, both new and existing ones. Apply for categories such as Storage, Networking, Compute, Security Center, and Monitoring.
+
+ex: Restrict (SKU) size of virtual machines (VMs) in your environment
+ex: Restrict the deployment Locations of resources
+
+Steps for implementing Azure Policy:
+
+- Create Policy Definition – Creade Definition on what to evaluate and action to take.
+- Apply the Definition to Resources – Assign the Definition, to resources or scopes. Once assigned to a Resource Group, it will be inherited by child resources by default. Can also exclude a sub-scope from Policy separately.
+- Review the Evaluation result – Runs every 1 Hour. The resource will be marked compliant or non-compliant.
+
+### Policy Initiative
+
+A collection of Policy Definitions, for large scale compliance check.
+
+### Policy Initiative Assignment
+
+Assign initiative definition to a resource scope, ex: Resource Group, Management Group
+
+### Role based Access Control (RBAC)
+
+Grant users only the access they need. 
+
+You -> “Developer” role -> permission given based on that. It uses an “allow” model, only the allowed actions are permitted nothing else.
+
+### Resource Locks
+
+Prevent deleting or modifying of Azure Resources. Prevent accidental actions for critical resources. 
+
+Lock subscription, resource group or even a resource – go to SETTINGS -> and create Lock.
+
+Locks apply even for Authorised Admins, regardless of RBAC permissions. You must first remove the Lock to perform the lock prevented action.
+
+- CanNotDelete – can read and modify but can’t delete.
+- ReadOnly – can read but can’t modify or delete.
+
+Parent level locks (Resource Group level) gets inherited to child levels (Resource level).
+
+### Azure Blueprints
+
+Pre-defined Azure resource template that complies with organization’s standards, patterns and requirements. Speed up development, deployment and delivery.
+
+Create an Azure Blueprint.
+Assign the blueprint.
+Track the blueprint assignments.
+
+Each blueprint deployment is tied to the blueprint package. Improved auditing and tracking. Used in DevOps, for pipelines.
+
+Azure Subscription governance
+
+Three aspects to consider,
+
+Billing – can be maintained by subscriptions. One subscription per department or environment (dev, test, prod).
+Access Control – 1 Azure Subscription <-> 1 AD Tenant, Each subscription managed using RBAC for each environment (dev, test, prod).
+Subscription Limits – Making sure your requirements are met within the Subscription limit.
+
 
 (WIP)
