@@ -280,4 +280,46 @@ Limits the impact in case of a credential exposure.
 
 ### [Review security tools and features](https://docs.microsoft.com/en-gb/learn/modules/review-security-tools-features/)
 
+### Azure Security Center
+
+Provides threat protection across on-premise and Azure resources.
+
+- Provides recommendations based on configurations, resources and workloads.
+- Continuous Monitoring and Security assessments.
+- Use machine learning to block malware in VMs
+- Analyse and identify potential inbound attacks and prevent them.
+- Help with post-attack recovery.
+- Just in time access control for ports, only allow legitimate network traffic.
+
+Usage scenarios,
+
+– Post-attack Recovery scenario – detect, assess and diagnose
+– Recommendation improvement scenario – using Security Policies and Recommendations for your resources
+
+### Azure Key Vault
+
+Securely storing your application secrets. Store them in single central location, with access control and monitoring. Easy integration with other Azure services.
+
+Features,
+
+- Secret Management (API secrets, keys, tokens, passwords)
+- Key Management (encryption keys)
+- Certificate Management (SSL/TSL certificates)
+- Secrets backed by Hardware Security Devices
+
+### Azure Information Protection (AIP)
+
+For protecting your Organization Documents and Emails with Labels. These Labels are defined by Administrators. Ex: protecting Word documents with sensitive data.
+
+### Azure Advanced Thread Protection (ATP)
+
+For protecting your Organization’s Network. Identify, detect and investigate threats.
+
+Components:
+
+- Azure Advanced Threat Protection (ATP) portal – monitor activity, and view data received from ATP sensors.
+- Azure Advanced Threat Protection (ATP) sensor – installed in domain controllers, and monitors traffic.
+- Azure Advanced Threat Protection (ATP) cloud service – Azure ATP cloud service runs in Azure infrastructure and connected to Microsoft’s intelligent security graph.
+
+
 (WIP)
