@@ -309,7 +309,11 @@ Features,
 
 ### Azure Information Protection (AIP)
 
-For protecting your Organization Documents and Emails with Labels. These Labels are defined by Administrators. Ex: protecting Word documents with sensitive data.
+For classifying and protecting your Organization Documents and Emails with Labels. These Labels are defined by Administrators. Ex: protecting Word documents with sensitive data.
+
+- Track and control the content.
+- Analyse data flows.
+- Detect risky behaviors.
 
 ### Azure Advanced Thread Protection (ATP)
 
@@ -317,9 +321,10 @@ For protecting your Organization’s Network. Identify, detect and investigate t
 
 Components:
 
-- Azure Advanced Threat Protection (ATP) portal – monitor activity, and view data received from ATP sensors.
-- Azure Advanced Threat Protection (ATP) sensor – installed in domain controllers, and monitors traffic.
-- Azure Advanced Threat Protection (ATP) cloud service – Azure ATP cloud service runs in Azure infrastructure and connected to Microsoft’s intelligent security graph.
+- ATP portal – monitor activity, and view data received from ATP sensors.
+- ATP sensor – installed in domain controllers, and monitors traffic.
+- ATP cloud service – Azure ATP cloud service runs in Azure infrastructure and connected to Microsoft’s intelligent security graph.
 
+[Describe Azure governance methodologies](https://docs.microsoft.com/en-gb/learn/modules/describe-azure-governance-methodologie/)
 
 (WIP)
