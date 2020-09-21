@@ -472,7 +472,7 @@ Physically separated cloud services in China. Comply with Chinese regulations, c
 
 ### Azure Subscription
 
-Provides you authenticated and authorized access to Azure and provision resources
+Provides you authenticated and authorized access to Azure and provision resources.
 
 - A logical unit of Azure services
 - Links to an Azure account
@@ -480,20 +480,36 @@ Provides you authenticated and authorized access to Azure and provision resource
 
 ### Types of Subscription Boundaries:
 
-- Billing boundaries – different models of billing, generate separate billings, organize cost
-- Access Control boundaries – different subscription policies, control access to resources
+- Billing boundaries – different models of billing, generate separate billings, organize cost.
+- Access Control boundaries – different subscription policies, control access to resources.
 
 Create multiple subscriptions for:
 
-- Different Environments – dev and test, isolate resources, access control
-- Different Organization Structures – control resource use and access
-- Different Billing Purposes – tracking costs
-- Subscription Limits – overcome the limitations of each subscription
+- Different Environments – dev and test, isolate resources, access control.
+- Different Organization Structures – control resource use and access.
+- Different Billing Purposes – tracking costs for each subscription.
+- Subscription Limits – overcome the limitations of each subscription.
 
 ### Customizing Billing
 
 Got Multiple Subscriptions? -> You can Separate into, Invoice Sections in your Invoice!
 
 Want to Set up multiple Invoices? -> You can create multiple Billing Profiles (with Own Invoice and Payment method)
+
+### Subscription Offers
+
+- Free account – 12 Months popular services, 30 days free for all
+- Pay-as-you-go – Dev/Test 
+- Visual Studio Enterprise (Bizpark) or Professional
+- Member Offers – by existing membership to other Microsoft products and services
+
+Management Groups – Manage access, policy and compliance for multiple Subscriptions
+
+Resource Organization levels of Azure
+
+- ^ Management Groups
+- ^^ Subscriptions
+- ^^^ Resource Groups
+- ^^^^ Resources
 
 (WIP)
