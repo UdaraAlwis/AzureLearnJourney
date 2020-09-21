@@ -503,9 +503,11 @@ Want to Set up multiple Invoices? -> You can create multiple Billing Profiles (w
 - Visual Studio Enterprise (Bizpark) or Professional
 - Member Offers – by existing membership to other Microsoft products and services
 
-Management Groups – Manage access, policy and compliance for multiple Subscriptions
+### Management Groups
 
-Resource Organization levels of Azure
+Manage access, policy and compliance for multiple Subscriptions.
+
+Resource Organization levels of Azure,
 
 - ^ Management Groups
 - ^^ Subscriptions
