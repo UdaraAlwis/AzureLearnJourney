@@ -428,4 +428,72 @@ feature Categories:
 - Visualize – Charts, tables visualizing monitoring data includes: Dashboards, Views, and Power BI
 - Integrate – with other systems, customized solutions for monitoring
 
+### [Examine privacy, compliance, and data protection standards](https://docs.microsoft.com/en-gb/learn/modules/privacy-compliance-data-protection-standards/)
+
+### Azure Compliance and Requirements
+
+When selecting a Cloud Provider, important things to consider:
+
+- Compliance for sensitive data
+- Compliance of the provided Services
+- Could it cater for my Custom Compliance requirements?
+
+Microsoft Azure provides the most comprehensive compliance offerings...
+
+### Microsoft Privacy Statement
+
+Explains what kind of personal data Microsoft Uses, How and for What purposes...
+
+### Microsoft Trust Center
+
+Provides information about how microsoft supports security, privacy, compliance and transparency in Azure. Support and resources for legal and compliance community.
+
+### Service Trust Portal
+
+Public site for publishing audit reports and compliance related info about Azure. Access audit reports, compliance guides, and trust documents.
+
+### Compliance Manager 
+
+This is provided with isn Service Trust Portal (STP), dashboard for risk assessment of data protection and compliance status of the Organization, regards to Microsoft and Azure service compliance. Track and record compliance related activities in the Organization. It also provides recommendations to improve data protection and compliance.
+
+### Azure Government Services
+
+Separate instance of Azure for US federal agencies. Physically separated data centers and networks with in US. Screened US personnel.
+
+### Azure China 21Vianet Services
+
+Physically separated cloud services in China. Comply with Chinese regulations, customers sign contracts with 21Vianet when using Azure Services hosted in China.
+
+---
+
+## LEARNING PATH 4: Review Microsoft Azure pricing, service level agreements, and lifecycles (AZ-900)
+
+### [Examine Azure subscriptions](https://docs.microsoft.com/en-gb/learn/modules/examine-azure-subscriptions/)
+
+### Azure Subscription
+
+Provides you authenticated and authorized access to Azure and provision resources
+
+- A logical unit of Azure services
+- Links to an Azure account
+- Authorized by an Azure active directory
+
+### Types of Subscription Boundaries:
+
+- Billing boundaries – different models of billing, generate separate billings, organize cost
+- Access Control boundaries – different subscription policies, control access to resources
+
+Create multiple subscriptions for:
+
+- Different Environments – dev and test, isolate resources, access control
+- Different Organization Structures – control resource use and access
+- Different Billing Purposes – tracking costs
+- Subscription Limits – overcome the limitations of each subscription
+
+### Customizing Billing
+
+Got Multiple Subscriptions? -> You can Separate into, Invoice Sections in your Invoice!
+
+Want to Set up multiple Invoices? -> You can create multiple Billing Profiles (with Own Invoice and Payment method)
+
 (WIP)
