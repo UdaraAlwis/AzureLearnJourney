@@ -332,8 +332,8 @@ Components:
 
 Service that lets your create policies for Azure resources, for maintaining standards and compliance. Runs evaluations on resources, both new and existing ones. Apply for categories such as Storage, Networking, Compute, Security Center, and Monitoring.
 
-ex: Restrict (SKU) size of virtual machines (VMs) in your environment
-ex: Restrict the deployment Locations of resources
+- ex: Restrict (SKU) size of virtual machines (VMs) in your environment
+- ex: Restrict the deployment Locations of resources
 
 Steps for implementing Azure Policy:
 
@@ -372,19 +372,60 @@ Parent level locks (Resource Group level) gets inherited to child levels (Resour
 
 Pre-defined Azure resource template that complies with organization’s standards, patterns and requirements. Speed up development, deployment and delivery.
 
-Create an Azure Blueprint.
-Assign the blueprint.
-Track the blueprint assignments.
+- Create an Azure Blueprint.
+- Assign the blueprint.
+- Track the blueprint assignments.
 
 Each blueprint deployment is tied to the blueprint package. Improved auditing and tracking. Used in DevOps, for pipelines.
 
-Azure Subscription governance
+### Azure Subscription governance
 
 Three aspects to consider,
 
-Billing – can be maintained by subscriptions. One subscription per department or environment (dev, test, prod).
-Access Control – 1 Azure Subscription <-> 1 AD Tenant, Each subscription managed using RBAC for each environment (dev, test, prod).
-Subscription Limits – Making sure your requirements are met within the Subscription limit.
+- Billing – can be maintained per subscription. One subscription per department or environment (dev, test, prod).
+- Access Control – 1 Azure Subscription <-> 1 AD Tenant, Each subscription managed using RBAC for each environment (dev, test, prod).
+- Subscription Limits – Making sure your requirements are met within the Subscription limit.
 
+### [Explore monitoring and reporting](https://docs.microsoft.com/en-gb/learn/modules/explore-monitoring-reporting/)
+
+### Azure Tags
+
+Tag your Resources in Azure based on tag [name – value] pair and retrieve them regardless of Resource Group under the same Subscription.
+
+50 Maximum tags per Resource. For more tags, use JSON string for Tag value.
+
+Tags are not inherited by child resources, but can be enforced by Azure Policy.
+
+### Azure Monitor
+
+Monitoring performance and identifying issues in your Azure and on-premise Resources.
+
+Collects analytical data from: Application, OS, Resource Operations, Subscription, Azure AD
+
+Diagnostic settings:
+
+- Activity Log - when resource created or modified.
+- Metrics - performance when a resource is consuming.
+
+Extend the monitoring data by enabling diagnostics and adding agents to the resource.
+
+### Azure Service Health
+
+Provide personalized support when issues in Azure affects you. Helps to prepare for planned maintenance.
+
+Components –
+
+Azure Status – global view of Azure service health.
+Service Health – personalised dashboard view for your resources, advisory, alerts, history.
+Resource Health – personalised dashboard for health of your resources.
+
+Azure Monitor – monitoring with improved visibility into operations in your Compute resources.
+
+feature Categories:
+
+- Analyse – Application Insights, Azure Monitor for Containers, Azure Monitor for VMs
+- Respond – Alerts, Autoscale
+- Visualize – Charts, tables visualizing monitoring data includes: Dashboards, Views, and Power BI
+- Integrate – with other systems, customized solutions for monitoring
 
 (WIP)
