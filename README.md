@@ -1,6 +1,12 @@
 # AzureLearnJourney
 
-Azure Learn-ing Journey: https://docs.microsoft.com/en-gb/learn/certifications/exams/az-900
+Azure Learn-ing Journey, 
+I have been self-learning Azure on Microsoft Learn docs, initially for taking the AZ-900 Certificate exam. During that time, I kept on making short notes when I go through the Learn modules recommended by Microsoft. So I have compiled my short notes here for everyone to just in case it comes handy for anyone out there! ;)
+
+
+# AZ-900 Study Short-Notes
+
+AZ-900 Exam guide: https://docs.microsoft.com/en-gb/learn/certifications/exams/az-900
 
 LEARNING PATH 1: Explore Microsoft Azure cloud concepts (AZ-900) 
 
@@ -634,15 +640,21 @@ Azure provides preview services, features and functionality for evaluation/testi
 - Public Previews – available for all.
 
 Azure Portal Preview features: https://preview.portal.azure.com/
-improvements on performance, navigation and accessibility features of the Portal.
+
+Improvements on performance, navigation and accessibility features of the Portal.
 
 ### Azure Updates page
 
 https://azure.microsoft.com/en-gb/updates/
+
 Gives you latest updates on Azure products and services.
 
 ### General Availability (GA)
 
 The finalized release after development and testing of a feature.
 
-(WIP)
+---
+
+That's all the notes, good luck with the AZ-900 exam! ^_^ 
+
+-Udara Alwis
