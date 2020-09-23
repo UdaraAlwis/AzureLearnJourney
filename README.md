@@ -514,4 +514,77 @@ Resource Organization levels of Azure,
 - ^^^ Resource Groups
 - ^^^^ Resources
 
+### [Review planning and managing Azure costs](https://docs.microsoft.com/en-gb/learn/modules/review-planning-managing-costs/)
+
+### Purchasing Azure Produts and Services
+
+Three main types of Customers:
+
+- Enterprise – Companies sign a direct Enterprise Contract with Azure, Custom pricing
+- Web Direct – direct Customers paying Public Prices for Azure
+- Cloud Solution Provider – Microsoft Partner Companies build solutions for Customers
+
+Azure portal -> Billing page – to see your current billing usage and past invoices
+
+Resources are charged only on usage. Pay for what you use model!
+
+### Explore factors affecting costs
+
+Meters are used for tracking costs of Resource usage. Each resource may have multiple meters that tracks usage of different aspects: Compute, IP Address, Data Transfer, Disk Operations, etc.
+
+### Main factors that affect costs
+
+- Resource Type – different resource types have different number of meters
+- Services – costs different for Enterprise, Web Direct and CSP Customers
+- Location – different locations, and data transfers between them
+
+### Billing Zone
+
+Geographical grouping of Azure Regions for Billing purposes.
+ 
+Bandwidth – data going in and out of Azure. Datacenter Inbound data is mostly free, but Outbound data transfers are priced based on Zones.
+
+ex: Zone 1 – West US, East US, Canada West, West Europe | Zone 2 – Australia Central, Japan West, Central India | Zone 3 – Brazil South
+
+### Azure Pricing Calculator
+
+Helps you estimate cost of Azure Products with configurations such as Region, Tier, Billing Options, Support Options, Offers, Dev/Test Pricing
+
+### Azure Total Cost of Ownership Calculator
+
+Helps you estimate the savings by migrating to Azure Cloud Services against on-premise infrastructure.
+
+Three steps process:
+
+- Define Workloads – current details of on-premise infrastructure, Servers, Databases, Storage, and Networking
+- Adjust Assumptions – to improve accuracy, for Assumed Costs such as storage, IT labor, hardware, software, electricity, data center, networking.
+- View Report – generate detailed report to compare on-premise vs azure cloud costs
+
+### Way of minimising Costs in Azure
+
+- Perform Cost Analyses – use Azure Pricing and Total Cost of Ownership (TCO) Calculators
+- Monitor usage with Azure Advisor – monitor efficiency of resources based on demand
+- use Spending Limit – for Credit-based Azure Subscriptions, not avail for Pay-As-You-Go
+- use Azure Reservations – reserve Azure products by paying in advance, get discounts
+- use Low Cost Locations and Regions – when provisioning Resources (except bandwidth)
+- use cost saving Offers – use Azure customer and subscription offers
+- use Tags for Resources – to easily monitor costs for resources
+
+### Azure Cost Management
+
+Provides tools for monitoring and optimizing azure costs
+
+Main features of  Azure Cost Management toolset,
+
+- Reporting – generate reports on history and forecast future costs.
+- Data enrichment – categorize resources by Tags.
+- Budgets – usage budgets, monitoring usage, trends and patterns.
+- Alerting – alerts based on costs and budgets.
+- Recommendations – get recommendations for optimization.
+- Price – free for Azure users.
+
+### [Explore Azure service level agreements (SLAs)](https://docs.microsoft.com/en-gb/learn/modules/explore-azure-service-level-agreements/)
+
+
+
 (WIP)
