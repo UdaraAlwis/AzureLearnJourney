@@ -585,6 +585,64 @@ Main features of  Azure Cost Management toolset,
 
 ### [Explore Azure service level agreements (SLAs)](https://docs.microsoft.com/en-gb/learn/modules/explore-azure-service-level-agreements/)
 
+### Service Level Agreements (SLAs)
 
+A formal document that specifies Microsoft’s commitment for adhering to performance and standards. It also specifies what happens if they fail to do so.
+
+Each product has its own SLA, with different ways of expression, such as uptime or connectivity rate.
+
+- Performance targets: 99.9% – 99.99%
+- Potential down time – different estimates
+- Service credits – Compensation from Microsoft, Ex: reduced Bill, Service Credits
+
+### Composite SLA
+
+Combining multiple SLAs together, in a full application or infrastructure scenario...
+
+Web App (99.99%) x SQL Database (99.95%) = 99.94% SLA (composite)
+
+You can improve by SLA by adding redundant fall back paths per Resource. But you need to handle Complexity and Extra Cost.
+
+### Application SLA
+
+You can define your own SLA for your Customers – set performance targets to suit your requirement.
+
+Considerations,
+
+- Identify workloads – based on requirement, SLAs for each workload.
+- Plan for usage Patterns – requirements during critical and non-critical times.
+- Establish availability metrics – time to recover (MTTR) and up time between failures (MTBF).
+- Establish recovery metrics – accepted unavailable time and data loss time during a disaster.
+- Implement Resiliency strategies – application’s ability to recover and continue function
+- Build availability req. into design – to enforce your SLA targets.
+
+Understand your App requirement -> select your Azure Resources -> your own SLA will depend on that.
+
+Resiliency -> design for high availability and faster disaster recovery -> Identify points of possible failure and define how to respond to them.
+
+Cost and Complexity vs High Availability -> goes hand in hand.
+
+99.99% SLA performance -> higher than this is very difficult. Need self diagnosis and self healing, also manual intervention.
+
+### [Review Microsoft Azure pricing, service level agreements, and lifecycles (AZ-900)](https://docs.microsoft.com/en-gb/learn/modules/examine-service-lifecycle-azure/)
+
+### Azure Previews
+
+Azure provides preview services, features and functionality for evaluation/testing purposes. Available with their own Terms and Conditions.
+
+- Private Previews – available for certain customers only.
+- Public Previews – available for all.
+
+Azure Portal Preview features: https://preview.portal.azure.com/
+improvements on performance, navigation and accessibility features of the Portal.
+
+### Azure Updates page
+
+https://azure.microsoft.com/en-gb/updates/
+Gives you latest updates on Azure products and services.
+
+### General Availability (GA)
+
+The finalized release after development and testing of a feature.
 
 (WIP)
