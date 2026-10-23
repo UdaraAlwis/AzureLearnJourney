@@ -10,7 +10,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, and **Interact with Copilot**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -109,7 +109,7 @@ I completed this Microsoft Learn unit: [PASTE EXACT UNIT URL]
 Continue the GH-300 study notes and quiz incrementally. First verify the link is a single unit and read its authoritative content. Then:
 
 - Update `GH-300/README.md` under the matching module with short plain-language notes and focused hyphen bullets; do not mark the whole module complete.
-- Add enough original questions for this completed unit only in `GH-300/Training Quiz/src/questions.ts`; preserve existing questions and IDs so browser progress survives.
+- Add the number of original questions that best covers this completed unit only in `GH-300/Training Quiz/src/questions.ts`; there is no fixed question count. Use fewer questions for focused content and more for broad or high-value content; preserve existing questions and IDs so browser progress survives.
 - Write standalone, exam-style decision scenarios. Do not mention the training unit, its wording, or the learner. Do not copy or use remembered, leaked, dump-site, or community “actual exam” questions.
 - Use explicit formats (`single-select`, `multiple-select`, `true-false`), practical scenarios where supported, rationales explaining correct and plausible incorrect answers, and the exact unit URL for every question.
 - Keep the unit picker, GH-300-only localStorage progress, keyboard accessibility, and responsive layout working.
