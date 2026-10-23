@@ -1,6 +1,6 @@
 # GH-300 GitHub Copilot Practice Quiz
 
-A standalone Vite + React + TypeScript quiz for [GH-300 study notes](../README.md). Questions are added only after a Microsoft Learn unit is completed and its exact URL shared. The bank starts empty.
+A standalone Vite + React + TypeScript quiz for [GH-300 study notes](../README.md). Questions are added only after a Microsoft Learn unit is completed and its exact URL shared. The current bank covers **Mitigate AI risks**.
 
 From this directory:
 
