@@ -20,7 +20,7 @@ LEARNING PATH 4: Review Microsoft Azure pricing, service level agreements, and l
 
 Big corporates purchase in large scale and pass down benefits to their Customers. Reduced costs and with efficiency.
 
-- CapEx – Up front spending on infrastructure such as hardware. (Servers, Storage, Network, Backups, Recovery, Infrastructure, Technical personnel.
+- CapEx – Up front spending on infrastructure such as hardware. (Servers, Storage, Network, Backups, Recovery, Infrastructure, Technical personnel.)
 - OpEx – Spending for what is used now ex: use compute from Cloud Service providers. (Leasing Software, Resources, Scaling based on demand, Billing only for usage)
 
 ### [Distinguish types of cloud models](https://docs.microsoft.com/en-gb/learn/modules/distinguish-types-cloud-models/)

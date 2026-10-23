@@ -15,4 +15,6 @@ You can check them from here,
 
 ## [DP-900 Study Notes](./DP-900/README.md)
 
+## [GH-600 Study Notes](./GH-600/README.md)
+
 Cheers!

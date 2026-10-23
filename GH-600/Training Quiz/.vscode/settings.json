@@ -1,0 +1,6 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "npx create-vite@latest": true,
+        "npm install": true
+    }
+}
