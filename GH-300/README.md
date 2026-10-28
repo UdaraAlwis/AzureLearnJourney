@@ -10,7 +10,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, and **Interact with Copilot**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, and **Set up, configure, and troubleshoot GitHub Copilot**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -60,6 +60,7 @@ GitHub Copilot is an AI pair programmer that helps developers create, understand
 - Copilot Spaces provide a context-rich place to explore a project, plan work, refine requirements, and iterate on designs.
 - Copilot Cloud Agent can perform multi-step coding tasks, such as generating related files, implementing a feature set, or scaffolding from a specification, under developer direction.
 - Plans differ by usage capacity and organizational capabilities: Free has limited usage; Pro and Pro+ add individual capacity and priority access; Business adds centralized controls and protections; Enterprise adds personalized organization-aware features.
+
 #### [Interact with Copilot](https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/3-interacting-with-copilot)
 
 Use the interaction method that best fits the current task, then review Copilot output before using it.
@@ -70,6 +71,18 @@ Use the interaction method that best fits the current task, then review Copilot 
 - Inline Chat slash commands include `/explain`, `/suggest`, `/tests`, and `/comment` for targeted actions.
 - Comments can describe intended functionality for code generation. For complex code, cycle through alternative suggestions to compare approaches.
 - Well-structured, well-commented code gives Copilot better context and can improve the relevance of its suggestions.
+
+#### [Set up, configure, and troubleshoot GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/4-setup-configure-troubleshoot)
+
+Start with a GitHub account that has access to GitHub Copilot, then install and authorize Copilot in the chosen environment.
+
+- GitHub Copilot is available on GitHub.com without an extension and as an extension in VS Code, Visual Studio, JetBrains IDEs, and Neovim.
+- In VS Code, install the **GitHub Copilot** extension and sign in to GitHub when prompted to authorize VS Code.
+- Use the Copilot status icon to enable or disable Copilot completions globally or only for the language of the active file.
+- In VS Code settings, under **Extensions** > **GitHub Copilot**, use **Editor: Enable Auto Completions** to control inline suggestions and language-specific behavior.
+- For connection issues, inspect VS Code extension logs with **Developer: Open Log File** or **Developer: Open Extensions Logs Folder**; if normal logs are empty, inspect Electron logs through **Help** > **Toggle Developer Tools**.
+- Network restrictions, firewalls, and proxies can affect Copilot connectivity. Run **GitHub Copilot: Collect Diagnostics** from the Command Palette to collect information for investigation or support.
+
 ### [Introduction to prompt engineering with GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/)
 
 ### [Introduction to Copilot Spaces](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/)
