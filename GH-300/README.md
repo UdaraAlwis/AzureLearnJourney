@@ -10,7 +10,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, and **Set up, configure, and troubleshoot GitHub Copilot**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, and **Prompt engineering foundations and best practices**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -83,7 +83,25 @@ Start with a GitHub account that has access to GitHub Copilot, then install and 
 - For connection issues, inspect VS Code extension logs with **Developer: Open Log File** or **Developer: Open Extensions Logs Folder**; if normal logs are empty, inspect Electron logs through **Help** > **Toggle Developer Tools**.
 - Network restrictions, firewalls, and proxies can affect Copilot connectivity. Run **GitHub Copilot: Collect Diagnostics** from the Command Palette to collect information for investigation or support.
 
+##### Completed exercise: Develop with AI-powered code suggestions using GitHub Copilot and VS Code
+
+- Microsoft Learn exercise: [Develop with AI-powered code suggestions by using GitHub Copilot and VS Code](https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/5-exercise?source=learn)
+- Exercise repository: [UdaraAlwis/skills-getting-started-with-github-copilot](https://github.com/UdaraAlwis/skills-getting-started-with-github-copilot)
+- Completed exercise issue: [Issue #1 — Exercise: Get started using GitHub Copilot](https://github.com/UdaraAlwis/skills-getting-started-with-github-copilot/issues/1)
+
 ### [Introduction to prompt engineering with GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/)
+
+#### [Prompt engineering foundations and best practices](https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/2-prompt-engineering-foundations-best-practices)
+
+Prompt engineering is the practice of giving Copilot clear instructions so it can generate code appropriate to the project and task.
+
+- Use the **4 Ss**: make each prompt **Single** in purpose, **Specific** in instructions, **Short** but clear, and **Surrounded** by useful context such as descriptive filenames and related open files.
+- Add relevant comments, requirements, and examples to clarify intended behavior; Copilot can also use parallel open editor tabs as context.
+- Start with a focused prompt, then assert and iterate: refine the request with missing details or examples instead of accepting a weak first result.
+- **Zero-shot** prompting gives no example and suits common patterns; **one-shot** uses one example to establish a pattern; **few-shot** uses several examples for more complex patterns, scenarios, or edge cases.
+- For long Copilot Chat conversations, summarize prior context or reset the chat with essential details for a new task to keep requests focused and manage processing usage.
+- Role prompting asks Copilot to act as a relevant specialist, such as a security expert, performance expert, or testing specialist, to produce more targeted suggestions.
+- Review generated output before use; clear prompts improve relevance but do not guarantee production-ready code.
 
 ### [Introduction to Copilot Spaces](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/)
 
