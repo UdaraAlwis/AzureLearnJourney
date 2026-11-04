@@ -10,7 +10,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, and **Prompt engineering foundations and best practices**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, and **GitHub Copilot data**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -102,6 +102,29 @@ Prompt engineering is the practice of giving Copilot clear instructions so it ca
 - For long Copilot Chat conversations, summarize prior context or reset the chat with essential details for a new task to keep requests focused and manage processing usage.
 - Role prompting asks Copilot to act as a relevant specialist, such as a security expert, performance expert, or testing specialist, to produce more targeted suggestions.
 - Review generated output before use; clear prompts improve relevance but do not guarantee production-ready code.
+
+#### [GitHub Copilot user prompt process flow](https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/3-github-copilot-user-prompt-process-flow)
+
+Copilot turns a prompt into a suggestion through secure inbound processing, model generation, and validated outbound delivery.
+
+- The prompt is sent over HTTPS. Copilot gathers nearby code, the filename and file type, adjacent open tabs, project structure and paths, and programming-language or framework information.
+- Fill-in-the-Middle (FIM) pre-processing considers code before and after the cursor to build broader context for a suggestion.
+- A proxy in a GitHub-owned Microsoft Azure tenant filters traffic and blocks attempts to manipulate the system or reveal how suggestions are generated.
+- Content filtering screens for hate speech, inappropriate content, and personal data before the filtered prompt is sent to an LLM for code generation.
+- Generated responses are filtered again and checked for code-quality, security, and ethical concerns; responses with XSS or SQL-injection risks can be identified during validation.
+- Administrators can optionally enable matching-public-code filtering, which blocks suggestions longer than approximately 150 characters that closely match public code; failed responses can be truncated or discarded.
+- Only responses that pass checks are delivered. Acceptance, modification, and rejection contribute to the feedback loop for subsequent interactions.
+
+#### [GitHub Copilot data](https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/4-github-copilot-data)
+
+Data handling differs between code suggestions and chat experiences, and available context is limited.
+
+- For code suggestions in an editor, Copilot discards prompts such as code and other context after returning a suggestion; they are not retained to train foundational models.
+- GitHub Copilot Individual subscribers can opt out of sharing prompts with GitHub; otherwise, prompts can be used to fine-tune GitHub's foundational model.
+- Copilot Chat formats responses for the chat interface and maintains conversation history so follow-up questions can use prior context.
+- By default for Copilot Business and Copilot Enterprise, prompts and suggestions are not kept for Copilot Chat in the editor or Copilot CLI; Copilot in GitHub and GitHub Mobile keep them for up to 28 days.
+- Copilot Chat can handle direct questions, code requests, open-ended guidance, and contextual prompts containing code or scenario details.
+- Context windows limit the code and text Copilot can process at once. Break complex work into smaller focused requests or provide relevant snippets; Copilot Chat operates with a 4k-token context window.
 
 ### [Introduction to Copilot Spaces](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/)
 
