@@ -10,7 +10,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, and **GitHub Copilot data**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, and **GitHub Copilot Large Language Models (LLMs)**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -125,6 +125,16 @@ Data handling differs between code suggestions and chat experiences, and availab
 - By default for Copilot Business and Copilot Enterprise, prompts and suggestions are not kept for Copilot Chat in the editor or Copilot CLI; Copilot in GitHub and GitHub Mobile keep them for up to 28 days.
 - Copilot Chat can handle direct questions, code requests, open-ended guidance, and contextual prompts containing code or scenario details.
 - Context windows limit the code and text Copilot can process at once. Break complex work into smaller focused requests or provide relevant snippets; Copilot Chat operates with a 4k-token context window.
+
+#### [GitHub Copilot Large Language Models (LLMs)](https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/5-github-copilot-large-language-models)
+
+LLMs are AI neural networks trained on large volumes of text to understand, generate, and manipulate language.
+
+- LLMs use millions or billions of parameters that are tuned during training, enabling them to predict contextually relevant and coherent text.
+- Their broad training and versatility let them be tailored for specialized tasks, domains, and languages.
+- Copilot uses LLMs with context from the current file and other open IDE files or tabs to provide relevant code completions.
+- **Fine-tuning** adapts a pretrained model to a specific task or domain by training it on a smaller target dataset while retaining knowledge from the source model.
+- **LoRA** (Low-Rank Adaptation) fine-tuning adds small trainable components to layers of a pretrained model while leaving the original model unchanged, reducing the time and resources needed for task-specific adaptation.
 
 ### [Introduction to Copilot Spaces](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/)
 
