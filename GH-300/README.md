@@ -10,7 +10,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, and **GitHub Copilot Large Language Models (LLMs)**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, and **Introduction to Copilot Spaces**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -137,6 +137,16 @@ LLMs are AI neural networks trained on large volumes of text to understand, gene
 - **LoRA** (Low-Rank Adaptation) fine-tuning adds small trainable components to layers of a pretrained model while leaving the original model unchanged, reducing the time and resources needed for task-specific adaptation.
 
 ### [Introduction to Copilot Spaces](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/)
+
+#### [Introduction](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/1-introduction)
+
+A GitHub Copilot Space is a dedicated Copilot chat grounded in a curated, topic-specific set of context.
+
+- Add GitHub files, issues, pull requests, and free-text instructions to focus the Space on a service, runbook, dataset, or other narrow topic.
+- Use a Space when consistent, reproducible, domain-specific answers matter more than broad repository discovery; tightly scoped context tends to yield more predictable, grounded responses.
+- Attach repository code, documentation, configuration, and other assets as context. Linked GitHub files come from the repository's default branch, keeping them current as the repository changes.
+- Write brief, focused, actionable instructions for goals, style preferences, workflows, or canonical examples. Instructions can be updated as the Space evolves.
+- Keep the Space small because model context limits still apply. The selected sources and their order affect responses, so put the most important files and instructions first.
 
 ### [Using advanced GitHub Copilot features](https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/)
 
