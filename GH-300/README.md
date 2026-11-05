@@ -10,7 +10,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, and **Introduction to Copilot Spaces**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, and **Sharing, discoverability, and governance**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -147,6 +147,18 @@ A GitHub Copilot Space is a dedicated Copilot chat grounded in a curated, topic-
 - Attach repository code, documentation, configuration, and other assets as context. Linked GitHub files come from the repository's default branch, keeping them current as the repository changes.
 - Write brief, focused, actionable instructions for goals, style preferences, workflows, or canonical examples. Instructions can be updated as the Space evolves.
 - Keep the Space small because model context limits still apply. The selected sources and their order affect responses, so put the most important files and instructions first.
+
+#### [Sharing, discoverability, and governance](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/3-share-discover-govern)
+
+Manage a Copilot Space so it remains easy to find, safe to share, current, and useful over time.
+
+- Set ownership and visibility to match the intended audience. Share by link and, where available, use organization browsing or catalogs to aid discovery.
+- Use a clear, purpose-driven title and short description that state the Space's scope, audience, and expected outputs. Keep one job per Space.
+- A Space does not grant access. GitHub's existing repository, issue, and pull-request permissions determine which linked content a viewer can use or see reflected in answers.
+- Avoid pasting sensitive data into free-text notes. Prefer version-controlled linked files, where existing review processes and permissions apply.
+- Linked default-branch files and attached issues or pull requests stay current as their sources change. For branch-specific or historical guidance, narrow the references or provide the exact needed content as an example or supported text attachment.
+- Assign an owner, document how to use the Space, include canonical output examples, and set a regular review cadence to validate links, test representative prompts, prune stale sources, and confirm visibility.
+- Split a Space that grows beyond one job into smaller Spaces to preserve discovery and consistent answer quality.
 
 ### [Using advanced GitHub Copilot features](https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/)
 
