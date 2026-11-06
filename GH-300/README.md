@@ -10,7 +10,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, and **Sharing, discoverability, and governance**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, and **Do's and Don'ts of working in a Space**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -159,6 +159,19 @@ Manage a Copilot Space so it remains easy to find, safe to share, current, and u
 - Linked default-branch files and attached issues or pull requests stay current as their sources change. For branch-specific or historical guidance, narrow the references or provide the exact needed content as an example or supported text attachment.
 - Assign an owner, document how to use the Space, include canonical output examples, and set a regular review cadence to validate links, test representative prompts, prune stale sources, and confirm visibility.
 - Split a Space that grows beyond one job into smaller Spaces to preserve discovery and consistent answer quality.
+
+#### [Do's and Don'ts of working in a Space](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/6-working-guide-space)
+
+Work in a Space as a focused environment for one task or domain, using only the context it contains.
+
+- Keep questions tightly scoped to attached files, issues, pull requests, and notes; reuse the Space's terminology to support consistent answers.
+- Confirm the intended result, then refine requests with concrete constraints such as output format, time range, file path, or sections to examine. Ask for runnable code, queries, or commands and, where useful, source references for traceability.
+- A Space does not automatically discover content outside its included context unless an explicitly attached repository-search capability is available in the environment.
+- If responses drift, tighten instructions, add one to three high-quality examples of the desired output, and remove noisy or irrelevant sources.
+- Keep context fresh, focused, and ordered: linked files track the default branch, and the most important sources or examples should appear first.
+- Do not use `@` mentions to notify people or invoke other Copilot extensions from a Space; these interactions are not supported there.
+- Do not let a Space exceed context limits or grow beyond one job. Reduce sources or split it into smaller Spaces when answers degrade or size warnings appear.
+- Do not paste sensitive data into free-text notes; prefer repository files or supported uploads so standard permissions and review processes apply.
 
 ### [Using advanced GitHub Copilot features](https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/)
 
