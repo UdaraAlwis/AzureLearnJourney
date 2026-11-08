@@ -10,7 +10,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, and **Do's and Don'ts of working in a Space**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, **Do's and Don'ts of working in a Space**, **Advanced GitHub Copilot features**, and **Applied GitHub Copilot techniques**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -173,7 +173,29 @@ Work in a Space as a focused environment for one task or domain, using only the 
 - Do not let a Space exceed context limits or grow beyond one job. Reduce sources or split it into smaller Spaces when answers degrade or size warnings appear.
 - Do not paste sensitive data into free-text notes; prefer repository files or supported uploads so standard permissions and review processes apply.
 
+##### Completed exercise: Democratize tribal knowledge using Copilot Spaces
+
+- Exercise repository: [UdaraAlwis/skills-scale-institutional-knowledge-using-copilot-spaces](https://github.com/UdaraAlwis/skills-scale-institutional-knowledge-using-copilot-spaces)
+
 ### [Using advanced GitHub Copilot features](https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/)
+
+#### [Advanced GitHub Copilot features](https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/2-advanced-github-copilot-features)
+
+Use the interaction style that fits the coding task: inline suggestions, chat, inline chat, and agents.
+
+- Inline suggestions appear as ghost text and can be accepted with `Tab`; Copilot uses open files as context by default, and comments can provide additional prompts.
+- Use the chat pane to ask about the current code or other software-development topics.
+- In VS Code, inline chat keeps the interaction near the code; open it with `Ctrl+I` on Windows or `Command+I` on macOS.
+- Slash commands such as `/tests` and `/docs` select a focused intent and can help produce relevant results with shorter prompts.
+- VS Code agents can answer using a specific context; for example, the `@terminal` agent can interact with the terminal.
+
+#### [Applied GitHub Copilot techniques](https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/4-applied-copilot-techniques)
+
+Apply implicit prompts and selectively provide context to work more effectively in an existing project.
+
+- Select code and use inline chat with `/fix` to request a code fix; slash commands such as `/doc`, `/explain`, `/generate`, `/optimize`, and `/tests` express common intents in chat or inline chat.
+- Ask Copilot to use relevant context such as the workspace or terminal output. The `@terminal` agent can help with terminal errors and commands; open files are also used as context by default.
+- Make prompts more specific when needed, and inspect the generated changes and explanations when updating project code or adding endpoints.
 
 ### [GitHub Copilot Across Environments: IDE, Chat, GitHub.com, Command Line Techniques, and the GitHub Copilot App](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/)
 
