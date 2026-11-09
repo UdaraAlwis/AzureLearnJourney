@@ -28,6 +28,39 @@ Use **Practice by question type** to open a format directly, **Mixed practice** 
 
 Ordering and row-based answers require all positions to be filled before submission and are graded position by position. The whole question must be correct to count as mastered; this is the app's rule, not a claim about official partial-credit scoring. Submission locks controls until the next question. Existing question IDs and the storage key are preserved.
 
+## Content Audit (2026-11-09)
+
+Manually reviewed all 93 prompts, choices, answer keys, explanations, and artifacts against their 14 exact linked Learn units. Cross-checked changing plan and data-policy claims with [GitHub's current plan documentation](https://docs.github.com/en/copilot/get-started/plans) and [personal model-training controls](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#model-training-and-improvements). Corrected or clarified 22 questions; retained 71. All IDs, answer-index keys, and saved mastery were preserved; one question changed from multiple-select to single-select because it has exactly one correct option. Revisit corrected topics even if previously marked mastered.
+
+| Completed unit | Questions reviewed | Audit result |
+| --- | ---: | --- |
+| Mitigate AI risks | 5 | Supported |
+| Six principles of Responsible AI | 9 | Supported, including principle matching and statement grids |
+| Copilot, your AI pair programmer | 7 | Clarified editor context and plan distinctions; removed indexing exclusivity implications |
+| Interact with Copilot | 7 | Clarified acceptance key, command scope, and context versus review |
+| Set up, configure, and troubleshoot | 9 | Corrected answer format and misleading settings-panel framing; verified setup sequence |
+| Prompt engineering foundations | 10 | Supported, including 4 Ss and example-count mappings |
+| User prompt process flow | 8 | Removed false strict chronology, filtering guarantees, and universal length-threshold implication |
+| Copilot data | 6 | Scoped training policy by plan; separated retention, history, and training permission |
+| Copilot LLMs | 5 | Clarified frozen LoRA base weights versus changed adapted behavior |
+| Introduction to Spaces | 5 | Supported with conditional uploads and focused context |
+| Space sharing and governance | 6 | Supported, including permissions and statement-grid keys |
+| Working in a Space | 5 | Clarified repository-document scope of the search exception |
+| Advanced Copilot features | 4 | Avoided universal command spelling and autonomous-execution implications |
+| Applied Copilot techniques | 7 | Added complete Python artifact and qualified command availability |
+
+Specific corrections:
+
+- `applied-copilot-techniques-hot-area-01`: originally clarified with a complete snippet, then replaced on request with a similar string-uppercase example. The correct line is `result = message.upper`; it must become `result = message.upper()` to produce `HELLO`. The full three-line snippet is visible and the second-line answer key is preserved.
+- `github-copilot-data-01`, `-02`, and `-03`: removed the blanket no-training claim, obsolete Individual-plan terminology, and memorization of old retention periods. Training permission is not the same as retention or local history. The Learn unit mixes older statements, so the current GitHub policy is the supplemental authority here.
+- `setup-configure-troubleshoot-copilot-02`: now single-select, matching its one correct answer.
+- `copilot-user-prompt-process-flow-07`: secure transmission and context gathering no longer have an unsupported strict order.
+- `interact-with-copilot-06`: reviewing output is evaluated as a review practice, not claimed to supply prompt context.
+- `github-copilot-llms-05`: frozen pretrained weights do not mean unchanged adapted-model behavior.
+- Command examples are scoped to available client command sets; chat participants are not described as automatically authorized to execute commands.
+
+Automated tests check answer cardinality, required rows, nonempty/distinct choices, valid indices and keys, every nonpositional choice subset, all ordering permutations, and the complete Python artifact. These tests validate structure and grading, not factual truth; the source review above is a separate manual check. Version-dependent features still require periodic review, and this is not official exam validation.
+
 ## Format Research (2026-11-09)
 
 The [GH-300 certification page](https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/) says the exam may contain interactive components and currently lists 100 minutes. It links to the [official GitHub exam demo](https://GHCertDemo.starttest.com). The demo inspected during this review is labeled GH-001 and explicitly demonstrates multiple-select and drag-and-drop; it is interface practice, not a GH-300 question bank or a promise about a particular sitting.

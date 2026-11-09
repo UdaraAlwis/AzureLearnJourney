@@ -114,19 +114,19 @@ Copilot turns a prompt into a suggestion through secure inbound processing, mode
 - A proxy in a GitHub-owned Microsoft Azure tenant filters traffic and blocks attempts to manipulate the system or reveal how suggestions are generated.
 - Content filtering screens for hate speech, inappropriate content, and personal data before the filtered prompt is sent to an LLM for code generation.
 - Generated responses are filtered again and checked for code-quality, security, and ethical concerns; responses with XSS or SQL-injection risks can be identified during validation.
-- Administrators can optionally enable matching-public-code filtering, which blocks suggestions longer than approximately 150 characters that closely match public code; failed responses can be truncated or discarded.
+- Administrators can optionally block suggestions matching public code. Current documentation describes comparison with surrounding code of about 150 characters, not a universal minimum suggestion length; failed responses can be withheld.
 - Only responses that pass checks are delivered. Acceptance, modification, and rejection contribute to the feedback loop for subsequent interactions.
 
 #### [GitHub Copilot data](https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/4-github-copilot-data)
 
 Data handling differs between code suggestions and chat experiences, and available context is limited.
 
-- For code suggestions in an editor, Copilot discards prompts such as code and other context after returning a suggestion; they are not retained to train foundational models.
-- GitHub Copilot Individual subscribers can opt out of sharing prompts with GitHub; otherwise, prompts can be used to fine-tune GitHub's foundational model.
+- Retention, conversation history, and model-training permission are separate concerns. Do not treat an editor feature as a universal guarantee of zero retention or no training use.
+- Under GitHub's standard data-protection terms, Copilot Business and Enterprise customer data is not used to train AI models. Personal-plan subscribers can disable model-training use in their personal Copilot settings.
 - Copilot Chat formats responses for the chat interface and maintains conversation history so follow-up questions can use prior context.
-- By default for Copilot Business and Copilot Enterprise, prompts and suggestions are not kept for Copilot Chat in the editor or Copilot CLI; Copilot in GitHub and GitHub Mobile keep them for up to 28 days.
+- Retention depends on the plan, interface, model, and current terms. The Learn unit's editor/CLI versus GitHub/mobile retention periods should not be memorized as universal current guarantees. Check [current GitHub data-training policy](https://docs.github.com/en/copilot/how-tos/manage-your-account/manage-policies#model-training-and-improvements) and applicable service terms.
 - Copilot Chat can handle direct questions, code requests, open-ended guidance, and contextual prompts containing code or scenario details.
-- Context windows limit the code and text Copilot can process at once. Break complex work into smaller focused requests or provide relevant snippets; Copilot Chat operates with a 4k-token context window.
+- Context windows limit the code and text Copilot can process at once. Break complex work into smaller focused requests or provide relevant snippets. Capacity varies by model and feature; the unit's 4k-token example is not a universal current limit.
 
 #### [GitHub Copilot Large Language Models (LLMs)](https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/5-github-copilot-large-language-models)
 
@@ -136,7 +136,7 @@ LLMs are AI neural networks trained on large volumes of text to understand, gene
 - Their broad training and versatility let them be tailored for specialized tasks, domains, and languages.
 - Copilot uses LLMs with context from the current file and other open IDE files or tabs to provide relevant code completions.
 - **Fine-tuning** adapts a pretrained model to a specific task or domain by training it on a smaller target dataset while retaining knowledge from the source model.
-- **LoRA** (Low-Rank Adaptation) fine-tuning adds small trainable components to layers of a pretrained model while leaving the original model unchanged, reducing the time and resources needed for task-specific adaptation.
+- **LoRA** (Low-Rank Adaptation) fine-tuning trains small added components while keeping pretrained base weights frozen, reducing adaptation costs. The adapted system's behavior still changes.
 
 ### [Introduction to Copilot Spaces](https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/)
 
