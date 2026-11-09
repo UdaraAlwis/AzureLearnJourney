@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
-import { questions } from './questions'
+import { questions, type QuestionFormat } from './questions'
+import { AnswerInput } from './AnswerInput'
+import { answerInstructions, formatLabels, isAnswerComplete, isAnswerCorrect } from './quizAnswers'
 import './App.css'
 
 type Progress = Record<string, boolean>
@@ -19,7 +21,8 @@ function loadProgress(): Progress {
 }
 
 function App() {
-  const [activeUnit, setActiveUnit] = useState<string | null>(null)
+  const [sessionQuestions, setSessionQuestions] = useState<typeof questions | null>(null)
+  const [mixedPractice, setMixedPractice] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selected, setSelected] = useState<number[]>([])
   const [submitted, setSubmitted] = useState(false)
@@ -34,19 +37,36 @@ function App() {
   }, [progress])
 
   const units = [...new Set(questions.map((item) => item.unitUrl))]
-  const unitQuestions = questions.filter((item) => item.unitUrl === activeUnit)
+  const unitQuestions = sessionQuestions ?? []
   const question = unitQuestions[currentIndex]
   const masteredCount = questions.filter((item) => progress[item.id]).length
 
   function returnToPicker() {
-    setActiveUnit(null)
+    setSessionQuestions(null)
+    setMixedPractice(false)
     setCurrentIndex(0)
     setSelected([])
     setSubmitted(false)
   }
 
   function beginUnit(unitUrl: string) {
-    setActiveUnit(unitUrl)
+    setSessionQuestions(questions.filter((item) => item.unitUrl === unitUrl))
+    setMixedPractice(false)
+    setCurrentIndex(0)
+    setSelected([])
+    setSubmitted(false)
+  }
+
+  function beginMixedPractice() {
+    const shuffled = [...questions]
+    for (let index = shuffled.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1))
+      const currentQuestion = shuffled[index]
+      shuffled[index] = shuffled[randomIndex]
+      shuffled[randomIndex] = currentQuestion
+    }
+    setSessionQuestions(shuffled)
+    setMixedPractice(true)
     setCurrentIndex(0)
     setSelected([])
     setSubmitted(false)
@@ -62,21 +82,17 @@ function App() {
     }
   }
 
-  function toggleChoice(index: number) {
-    if (submitted || !question) return
-    if (question.format === 'multiple-select') {
-      setSelected((current) => current.includes(index)
-        ? current.filter((choice) => choice !== index)
-        : [...current, index])
-    } else {
-      setSelected([index])
-    }
+  function beginFormat(format: QuestionFormat) {
+    setSessionQuestions(questions.filter((item) => item.format === format))
+    setMixedPractice(false)
+    setCurrentIndex(0)
+    setSelected([])
+    setSubmitted(false)
   }
 
   function submitAnswer() {
-    if (!question || submitted || selected.length === 0) return
-    const correct = selected.length === question.correctChoiceIndexes.length
-      && selected.every((index) => question.correctChoiceIndexes.includes(index))
+    if (!question || submitted || !isAnswerComplete(question, selected)) return
+    const correct = isAnswerCorrect(question, selected)
     setSubmitted(true)
     setProgress((current) => ({ ...current, [question.id]: correct }))
   }
@@ -106,15 +122,35 @@ function App() {
             <span className="empty-arrow" aria-hidden="true">↗</span>
           </section>
         </>
-      ) : !activeUnit || !question ? (
+      ) : !sessionQuestions || !question ? (
         <>
           <section className="hero compact" aria-labelledby="picker-title">
             <span className="kicker">PRACTICE AT YOUR PACE</span>
-            <h1 id="picker-title">Choose a <em>unit.</em></h1>
+            <h1 id="picker-title">Choose your <em>practice.</em></h1>
             <p className="lede">Pick any completed unit. Your mastery stays in this browser, so you can practice what matters next.</p>
             <div className="hero-meta">{units.length} UNITS <span className="meta-separator">·</span> {masteredCount} / {questions.length} MASTERED</div>
           </section>
+          <section className="unit-list" aria-labelledby="mixed-practice-title">
+            <h2 id="mixed-practice-title">Mixed practice</h2>
+            <button className="unit-card" type="button" onClick={beginMixedPractice}>
+              <span className="unit-info"><strong>All questions</strong><small>{questions.length} questions across {units.length} units · Random order</small></span>
+              <span className="unit-arrow" aria-hidden="true">↗</span>
+            </button>
+          </section>
+          <section aria-labelledby="format-practice-title">
+            <h2 id="format-practice-title">Practice by question type</h2>
+            <div className="format-list">
+              {(Object.keys(formatLabels) as QuestionFormat[]).map((format) => {
+                const count = questions.filter((item) => item.format === format).length
+                return count > 0 && <button className="unit-card" type="button" key={format} onClick={() => beginFormat(format)}>
+                  <span className="unit-info"><strong>{formatLabels[format]}</strong><small>{count} questions</small></span>
+                  <span className="unit-arrow" aria-hidden="true">↗</span>
+                </button>
+              })}
+            </div>
+          </section>
           <section className="unit-list" aria-label="Units available for practice">
+            <h2>Unit practice</h2>
             {units.map((unitUrl, index) => {
               const unitQuestions = questions.filter((item) => item.unitUrl === unitUrl)
               const mastered = unitQuestions.filter((item) => progress[item.id]).length
@@ -130,29 +166,23 @@ function App() {
         </>
       ) : (
         <>
-          <div className="quiz-nav"><button className="back-button" type="button" onClick={returnToPicker}>← All units</button><span>{currentIndex + 1} / {unitQuestions.length}</span></div>
+          <div className="quiz-nav"><button className="back-button" type="button" onClick={returnToPicker}>← All units</button><span>{mixedPractice ? 'Mixed practice · ' : ''}{currentIndex + 1} / {unitQuestions.length}</span></div>
           <section className="question-panel" aria-labelledby="question-title">
             <p className="kicker">{question.unitTitle} <span aria-hidden="true">/</span> QUESTION {String(currentIndex + 1).padStart(2, '0')}</p>
             <h1 id="question-title">{question.prompt}</h1>
             {question.artifact && <pre className="artifact"><code>{question.artifact}</code></pre>}
             <fieldset aria-labelledby="question-title" aria-describedby="answer-instruction" disabled={submitted}>
               <legend className="sr-only">Answer choices</legend>
-              <p id="answer-instruction" className="answer-instruction">{question.format === 'multiple-select' ? 'Select all that apply' : question.format === 'true-false' ? 'Choose true or false' : 'Select one answer'}</p>
-              <div className="choices">
-                {question.choices.map((choice, index) => (
-                  <label className={`choice ${selected.includes(index) ? 'selected' : ''}`} key={`${index}-${choice}`}>
-                    <input type={question.format === 'multiple-select' ? 'checkbox' : 'radio'} name={`question-${question.id}`} checked={selected.includes(index)} onChange={() => toggleChoice(index)} />
-                    <span>{choice}</span>
-                  </label>
-                ))}
-              </div>
+              <p id="answer-instruction" className="answer-instruction">{answerInstructions[question.format]}</p>
+              <AnswerInput key={question.id} question={question} answer={selected} onChange={setSelected} disabled={submitted} />
             </fieldset>
             {!submitted ? (
-              <button className="action-button" type="button" disabled={selected.length === 0} onClick={submitAnswer}>Check answer <span aria-hidden="true">→</span></button>
+              <button className="action-button" type="button" disabled={!isAnswerComplete(question, selected)} onClick={submitAnswer}>Check answer <span aria-hidden="true">→</span></button>
             ) : (
               <div className="feedback" role="status" aria-live="polite">
-                <h2>{selected.length === question.correctChoiceIndexes.length && selected.every((index) => question.correctChoiceIndexes.includes(index)) ? 'Correct answer.' : 'Not quite — take another look.'}</h2>
-                <p><strong>Correct: {question.correctChoiceIndexes.map((index) => question.choices[index]).join('; ')}</strong></p>
+                <h2>{isAnswerCorrect(question, selected) ? 'Correct answer.' : 'Not quite — take another look.'}</h2>
+                {question.rows ? <ul>{question.rows.map((row, index) => <li key={index}><strong>{row}: </strong>{question.choices[question.correctChoiceIndexes[index]]}</li>)
+                }</ul> : question.format === 'ordering' ? <ol>{question.correctChoiceIndexes.map((index) => <li key={index}>{question.choices[index]}</li>)}</ol> : <p><strong>Correct: {question.correctChoiceIndexes.map((index) => question.choices[index]).join('; ')}</strong></p>}
                 <p>{question.explanation}</p>
                 <a href={question.unitUrl} target="_blank" rel="noopener noreferrer">Review the exact Microsoft Learn unit ↗</a>
                 <button className="action-button" type="button" onClick={nextQuestion}>{currentIndex === unitQuestions.length - 1 ? 'Back to units' : 'Next question'} <span aria-hidden="true">→</span></button>

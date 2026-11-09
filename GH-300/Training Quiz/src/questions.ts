@@ -1,4 +1,4 @@
-export type QuestionFormat = 'single-select' | 'multiple-select' | 'true-false'
+export type QuestionFormat = 'single-select' | 'multiple-select' | 'true-false' | 'ordering' | 'matching' | 'dropdown' | 'yes-no' | 'hot-area'
 
 export interface QuizQuestion {
     /** Stable and unique across all units so saved mastery survives future additions. */
@@ -10,8 +10,9 @@ export interface QuizQuestion {
     prompt: string
     /** Optional excerpt of a prompt, setting, policy, or code to interpret. */
     artifact?: string
+    rows?: string[]
     choices: string[]
-    /** Zero-based positions of every correct choice. */
+    /** Choice indexes; positional formats use answer order or one index per row. */
     correctChoiceIndexes: number[]
     /** Explain the correct answer and why plausible alternatives are wrong. */
     explanation: string
@@ -1128,14 +1129,14 @@ export const questions: QuizQuestion[] = [
             'Use `/doc` in the chat pane because it automatically applies bug fixes.',
         ],
         correctChoiceIndexes: [0],
-        explanation: 'The unit describes selecting code, opening inline chat with Ctrl+I on Windows (or Command+I on Mac), and using `/fix` as an implicit request to fix it. `/tests` asks for tests, and `/doc` adds comments rather than repairing code.',
+        explanation: 'Select code, open inline chat with Ctrl+I on Windows (or Command+I on Mac), and use `/fix` as an implicit request to fix it. `/tests` asks for tests, and `/doc` adds comments rather than repairing code.',
     },
     {
         id: 'applied-copilot-techniques-02',
         unitTitle: 'Applied GitHub Copilot techniques',
         unitUrl: 'https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/4-applied-copilot-techniques',
         format: 'multiple-select',
-        prompt: 'A developer is working on a project and wants Copilot to help package it while considering project-wide or terminal context. Which statements describe techniques covered in the unit? Select all that apply.',
+        prompt: 'A developer is working on a project and wants Copilot to help package it while considering project-wide or terminal context. Which approaches support this workflow? Select all that apply.',
         choices: [
             'Ask Copilot Chat to generate a Dockerfile for the project, then refine the request with a constraint such as using a Python virtual environment.',
             'Use the `@terminal` agent to ask about an error using terminal output as context.',
@@ -1143,7 +1144,7 @@ export const questions: QuizQuestion[] = [
             'Expect the first generated suggestion to be final; do not reword the prompt if it misses a requirement.',
         ],
         correctChoiceIndexes: [0, 1, 2],
-        explanation: 'The unit shows using Copilot Chat to create a Dockerfile, refining the prompt with a specific requirement, using `@terminal` for terminal errors or commands, and notes that open files are default context. Rewording a prompt is appropriate when the response misses the desired result.',
+        explanation: 'Copilot Chat can help create a Dockerfile and refine it with specific requirements. `@terminal` provides terminal-focused assistance, and open files are default context. Rewording a prompt is appropriate when the response misses the desired result.',
     },
     {
         id: 'applied-copilot-techniques-03',
@@ -1168,6 +1169,181 @@ export const questions: QuizQuestion[] = [
         prompt: 'When an initial Copilot response does not meet a project requirement, the developer can make the prompt more specific or reword it.',
         choices: ['True', 'False'],
         correctChoiceIndexes: [0],
-        explanation: 'True. The unit recommends rewording or making a prompt more specific when suggestions are not what the developer needs, and describes adding constraints to a Dockerfile request as an example.',
+        explanation: 'True. Rewording a prompt or adding specific constraints, such as a requirement for a Dockerfile, helps when suggestions do not meet the intended result.',
+    },
+    {
+        id: 'copilot-setup-ordering-01',
+        unitTitle: 'Set up, configure, and troubleshoot GitHub Copilot',
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/4-setup-configure-troubleshoot',
+        format: 'ordering',
+        prompt: 'A developer with Copilot access starts in Visual Studio Marketplace. VS Code has not been authorized for their GitHub account. Arrange the installation actions in order.',
+        choices: [
+            'In VS Code, install the extension from the GitHub Copilot extension tab.',
+            'When prompted, sign in to GitHub to authorize VS Code.',
+            'On the Marketplace page for GitHub Copilot, select Install.',
+            'Accept the browser prompt to open VS Code.',
+        ],
+        correctChoiceIndexes: [2, 3, 0, 1],
+        explanation: 'The Marketplace Install action opens a prompt to launch VS Code. Installation then continues in the extension tab, followed by GitHub sign-in when authorization is needed. Signing in before this installation prompt or opening VS Code after the in-editor install reverses the specified workflow.',
+    },
+    {
+        id: 'copilot-prompt-flow-ordering-01',
+        unitTitle: 'GitHub Copilot user prompt process flow',
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/3-github-copilot-user-prompt-process-flow',
+        format: 'ordering',
+        prompt: 'A team is documenting the high-level lifecycle of a Copilot request. Arrange these processing stages from request submission to delivery.',
+        choices: [
+            'Generate a suggestion using the LLM.',
+            'Deliver the validated suggestion and collect user feedback.',
+            'Transmit the prompt securely and gather context.',
+            'Apply inbound content filtering.',
+            'Post-process and validate the generated response.',
+            'Pass the built prompt through the proxy filter.',
+        ],
+        correctChoiceIndexes: [2, 5, 3, 0, 4, 1],
+        explanation: 'Context gathering and secure transmission precede proxy and inbound content filtering. The LLM then generates a response, which is post-processed and validated before delivery. Delivery before validation or generation before inbound processing reverses these stages.',
+    },
+    {
+        id: 'applied-copilot-techniques-ordering-01',
+        unitTitle: 'Applied GitHub Copilot techniques',
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/4-applied-copilot-techniques',
+        format: 'ordering',
+        prompt: 'A developer on Windows wants an inline repair suggestion for selected Python code, using a short implicit prompt. Arrange the actions in order.',
+        choices: [
+            'Enter /fix in inline chat.',
+            'Select the code that needs a repair suggestion.',
+            'Open inline chat with Ctrl+I.',
+        ],
+        correctChoiceIndexes: [1, 2, 0],
+        explanation: 'Select the target code first, open inline chat, and then enter /fix. The selection supplies the target context and the slash command supplies the repair intent. Entering the command before opening chat does not follow this workflow.',
+    },
+    {
+        id: 'responsible-ai-principles-matching-01',
+        unitTitle: "Microsoft and GitHub's six principles of responsible AI",
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/responsible-ai-with-github-copilot/3-six-principles-of-responsible-ai',
+        format: 'matching',
+        prompt: 'An organization assigns a primary Responsible AI principle to each control. Match each control to its most direct principle. Options may be reused.',
+        rows: [
+            'Test outcomes for similarly situated demographic groups.',
+            'Support screen readers and users with limited connectivity.',
+            'Encrypt personal data and restrict access.',
+            'Document system capabilities and limitations.',
+            'Assign human responsibility for monitoring and risk mitigation.',
+            'Test predictable behavior under unexpected conditions.',
+        ],
+        choices: ['Accountability', 'Transparency', 'Privacy and security', 'Reliability and safety', 'Fairness', 'Inclusiveness'],
+        correctChoiceIndexes: [4, 5, 2, 1, 0, 3],
+        explanation: 'Fairness concerns comparable treatment; inclusiveness concerns broad access; privacy and security protect data; transparency makes systems understandable; accountability assigns human responsibility; reliability and safety concern consistent, safe behavior. A control may support multiple goals, but these are the most direct mappings.',
+    },
+    {
+        id: 'prompt-engineering-matching-01',
+        unitTitle: 'Prompt engineering foundations and best practices',
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/2-prompt-engineering-foundations-best-practices',
+        format: 'matching',
+        prompt: 'A developer reviews prompts against the 4 Ss. Match each improvement to the principle it directly applies. Options may be reused.',
+        rows: [
+            'Split an unrelated documentation request out of a code-generation prompt.',
+            'State the required input, output, and edge-case behavior explicitly.',
+            'Remove repetition while retaining necessary requirements.',
+            'Open related files and use descriptive filenames.',
+        ],
+        choices: ['Surround', 'Short', 'Single', 'Specific'],
+        correctChoiceIndexes: [2, 3, 1, 0],
+        explanation: 'Single keeps one purpose, Specific makes requirements explicit, Short removes unnecessary wording, and Surround supplies useful project context. Conciseness is not a reason to omit necessary constraints, and open files add context rather than narrowing task purpose.',
+    },
+    {
+        id: 'applied-copilot-techniques-matching-01',
+        unitTitle: 'Applied GitHub Copilot techniques',
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/4-applied-copilot-techniques',
+        format: 'matching',
+        prompt: 'A developer uses task-specific slash commands in Copilot Chat. Match each task to its command. Options may be reused, and some options may be unused.',
+        rows: ['Request an explanation of selected code.', 'Request runtime improvements for selected code.', 'Request unit tests for selected code.', 'Request comments on selected code.'],
+        choices: ['/tests', '/fix', '/doc', '/optimize', '/explain', '/help'],
+        correctChoiceIndexes: [4, 3, 0, 2],
+        explanation: '/explain requests an explanation, /optimize targets runtime, /tests requests tests, and /doc requests comments. /fix requests a repair and /help provides chat usage assistance; neither is the primary intent of these four tasks. Command availability and spelling can differ between clients and versions.',
+    },
+    {
+        id: 'copilot-setup-dropdown-01',
+        unitTitle: 'Set up, configure, and troubleshoot GitHub Copilot',
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/4-setup-configure-troubleshoot',
+        format: 'dropdown',
+        prompt: 'A support engineer is completing a VS Code troubleshooting runbook. Select the appropriate action for each blank.',
+        rows: [
+            'To open the folder containing extension logs, run [blank] in the Command Palette.',
+            'If regular logs contain no error details, inspect Electron logs through [blank].',
+            'To collect connection information for support, run [blank] in the Command Palette.',
+        ],
+        choices: ['GitHub Copilot: Collect Diagnostics', 'Help > Toggle Developer Tools', 'Developer: Open Extensions Logs Folder', 'Editor: Enable Auto Completions'],
+        correctChoiceIndexes: [2, 1, 0],
+        explanation: 'The extension-log command opens the regular log location, Developer Tools exposes Electron logs, and Collect Diagnostics gathers investigation information. Enable Auto Completions controls suggestions rather than collecting logs or connection diagnostics.',
+    },
+    {
+        id: 'prompt-engineering-dropdown-01',
+        unitTitle: 'Prompt engineering foundations and best practices',
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/introduction-prompt-engineering-with-github-copilot/2-prompt-engineering-foundations-best-practices',
+        format: 'dropdown',
+        prompt: 'A team classifies its prompting approaches by the examples supplied. Complete each description.',
+        rows: [
+            'A request with no demonstration examples uses [blank] prompting.',
+            'A request with exactly one demonstration uses [blank] prompting.',
+            'A request with several demonstrations of patterns and edge cases uses [blank] prompting.',
+        ],
+        choices: ['Few-shot', 'Zero-shot', 'One-shot', 'Model fine-tuning'],
+        correctChoiceIndexes: [1, 2, 0],
+        explanation: 'Zero-shot uses no examples, one-shot uses one, and few-shot uses several. Providing examples in a prompt is not model fine-tuning; it supplies context for the current interaction rather than retraining model parameters.',
+    },
+    {
+        id: 'copilot-spaces-governance-yes-no-01',
+        unitTitle: 'Sharing, discoverability, and governance',
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/introduction-copilot-spaces/3-share-discover-govern',
+        format: 'yes-no',
+        prompt: 'For each proposed action, indicate whether it meets the stated governance requirements.',
+        artifact: 'Case: A team shares a Space for a private service runbook. It must preserve repository access restrictions, avoid unnecessary sensitive-data copies, and keep the Space maintained.',
+        rows: [
+            'Rely on the Space link alone to grant every recipient access to private repository sources.',
+            'Link version-controlled files instead of pasting sensitive content into free-text notes.',
+            'Assign a maintainer and periodically review links, examples, and visibility.',
+        ],
+        choices: ['Yes', 'No'],
+        correctChoiceIndexes: [1, 0, 0],
+        explanation: 'A Space link does not grant repository permissions. Linked version-controlled files preserve normal review and access controls, while a maintainer and review cadence support ongoing governance. Sharing convenience does not override access restrictions.',
+    },
+    {
+        id: 'responsible-ai-principles-yes-no-01',
+        unitTitle: "Microsoft and GitHub's six principles of responsible AI",
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/responsible-ai-with-github-copilot/3-six-principles-of-responsible-ai',
+        format: 'yes-no',
+        prompt: 'For each statement about this AI-assisted service, select Yes if it follows Responsible AI principles; otherwise select No.',
+        artifact: 'Case: An organization introduces AI-assisted recommendations. The service handles personal data and must be usable by people with different abilities. The organization remains responsible for its operation.',
+        rows: [
+            'Collect only necessary personal data and obtain consent.',
+            'Remove human ownership because the AI produces the recommendations.',
+            'Offer accessible interaction options such as screen-reader support.',
+        ],
+        choices: ['Yes', 'No'],
+        correctChoiceIndexes: [0, 1, 0],
+        explanation: 'Data minimization and consent support privacy and security. Human ownership remains necessary for accountability even when AI generates recommendations. Accessible interactions support inclusiveness rather than excluding users based on ability.',
+    },
+    {
+        id: 'applied-copilot-techniques-hot-area-01',
+        unitTitle: 'Applied GitHub Copilot techniques',
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/advanced-github-copilot/4-applied-copilot-techniques',
+        format: 'hot-area',
+        prompt: 'A developer asks Copilot to find why a variable contains a method instead of the contents of a file. Select the line that requires adding a method call.',
+        artifact: 'Python file-reading fragment',
+        choices: ['with open("report.txt", "r") as source:', '    report = source.read', '    print(report)'],
+        correctChoiceIndexes: [1],
+        explanation: 'source.read refers to the method, while source.read() calls it and returns the file contents. The open statement establishes the file context and print displays the variable; neither performs the missing read call.',
+    },
+    {
+        id: 'copilot-setup-hot-area-01',
+        unitTitle: 'Set up, configure, and troubleshoot GitHub Copilot',
+        unitUrl: 'https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/4-setup-configure-troubleshoot',
+        format: 'hot-area',
+        prompt: 'A developer is in VS Code Settings under Extensions > GitHub Copilot. Select the setting area that controls automatic inline suggestions.',
+        artifact: 'Simplified settings panel; this is not an exact VS Code screenshot.',
+        choices: ['Editor: Enable Auto Completions', 'Developer: Open Log File', 'GitHub Copilot: Collect Diagnostics'],
+        correctChoiceIndexes: [0],
+        explanation: 'Editor: Enable Auto Completions controls inline suggestions. Open Log File and Collect Diagnostics are troubleshooting commands, not the setting for automatic completions.',
     },
 ]

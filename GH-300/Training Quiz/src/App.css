@@ -210,6 +210,12 @@ h1 em {
   gap: 10px;
 }
 
+.format-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 10px;
+}
+
 .unit-card {
   width: 100%;
   display: flex;
@@ -333,6 +339,121 @@ fieldset {
   height: 18px;
 }
 
+.answer-pool,
+.ordered-steps,
+.mapped-answer {
+  display: grid;
+  gap: 10px;
+}
+
+.drag-option,
+.ordered-step,
+.answer-row,
+.drop-target {
+  border: 1px solid var(--line);
+  padding: 14px;
+  background: white;
+  color: var(--ink);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.drag-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: inherit;
+  text-align: left;
+  cursor: grab;
+}
+
+.drag-option svg {
+  flex: none;
+}
+
+.ordered-steps {
+  padding: 0;
+  list-style: none;
+}
+
+.ordered-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.step-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex: 0 0 100px;
+}
+
+.step-tools button {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 36px;
+  background: #f4f9eb;
+  color: var(--deep-green);
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+
+.step-tools button:disabled {
+  opacity: .4;
+  cursor: default;
+}
+
+.drop-target {
+  border: 2px dashed var(--deep-green);
+  text-align: center;
+  min-height: 56px;
+}
+
+.mapped-label {
+  display: grid;
+  gap: 12px;
+}
+
+.mapped-label select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 8px;
+  font: inherit;
+  color: var(--ink);
+  background: white;
+  border: 1px solid var(--line);
+}
+
+.statement-row legend {
+  padding: 0;
+}
+
+.statement-options {
+  display: flex;
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.statement-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.hot-area code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 fieldset:disabled .choice {
   cursor: default;
 }
@@ -399,7 +520,7 @@ fieldset:disabled .choice {
   border: 0;
 }
 
-:where(button, a, input):focus-visible,
+:where(button, a, input, select):focus-visible,
 .choice:focus-within {
   outline: 3px solid #17482d;
   outline-offset: 3px;

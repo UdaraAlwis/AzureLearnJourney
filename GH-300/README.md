@@ -21,6 +21,8 @@ npm run dev
 
 Open the local URL displayed in the terminal, usually `http://localhost:5173`. Run `npm run build` to validate a production build.
 
+Practice includes single/multiple choice, true/false, drag-and-drop ordering and matching, dropdown completion, yes/no statement grids, and simplified code/settings hot areas. Mixed practice shuffles the full bank. These are original exercises based on completed units, not copied exam items or a guaranteed GH-300 format mix. See the [quiz format research and limitations](Training%20Quiz/README.md#format-research-2026-11-09) and the [official GitHub exam demo](https://GHCertDemo.starttest.com).
+
 ---
 
 ## LEARNING PATH 1: [GitHub Copilot Fundamentals Part 1 of 2](https://learn.microsoft.com/en-us/training/paths/copilot/) (GH-300)
@@ -195,7 +197,7 @@ Apply implicit prompts and selectively provide context to work more effectively 
 
 - Select code and use inline chat with `/fix` to request a code fix; slash commands such as `/doc`, `/explain`, `/generate`, `/optimize`, and `/tests` express common intents in chat or inline chat.
 - Ask Copilot to use relevant context such as the workspace or terminal output. The `@terminal` agent can help with terminal errors and commands; open files are also used as context by default.
-- Make prompts more specific when needed, and inspect the generated changes and explanations when updating project code or adding endpoints.
+- Make prompts more specific when needed, such as requiring a Python virtual environment in a generated Dockerfile; reword the request if suggestions miss the requirement.
 
 ### [GitHub Copilot Across Environments: IDE, Chat, GitHub.com, Command Line Techniques, and the GitHub Copilot App](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/)
 
@@ -232,7 +234,8 @@ Continue the GH-300 study notes and quiz incrementally. First verify the link is
 - Update `GH-300/README.md` under the matching module with short plain-language notes and focused hyphen bullets; do not mark the whole module complete.
 - Add the number of original questions that best covers this completed unit only in `GH-300/Training Quiz/src/questions.ts`; there is no fixed question count. Use fewer questions for focused content and more for broad or high-value content; preserve existing questions and IDs so browser progress survives.
 - Write standalone, exam-style decision scenarios. Do not mention the training unit, its wording, or the learner. Do not copy or use remembered, leaked, dump-site, or community “actual exam” questions.
-- Use explicit formats (`single-select`, `multiple-select`, `true-false`), practical scenarios where supported, rationales explaining correct and plausible incorrect answers, and the exact unit URL for every question.
+- Use explicit formats (`single-select`, `multiple-select`, `true-false`, `ordering`, `matching`, `dropdown`, `yes-no`, `hot-area`), choosing interactions that genuinely fit the content. Use practical standalone scenarios, rationales explaining correct and plausible incorrect answers, and the exact unit URL for every question. Ordered answers use sequence indexes; row-based formats require `rows` and one correct choice index per row.
+- Include interactive formats when the completed content supports them. Do not invent a CLI workflow, force an arbitrary order onto independent actions, or claim a guaranteed official exam-format mix. Preserve original questions and IDs when adding coverage.
 - Keep the unit picker, GH-300-only localStorage progress, keyboard accessibility, and responsive layout working.
 - Do not add material from unfinished units. If the unit is inaccessible, ask for its text rather than inventing notes or questions.
 - Recheck the [GH-300 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-300) for changes; run `npm run build` from `GH-300/Training Quiz`.
