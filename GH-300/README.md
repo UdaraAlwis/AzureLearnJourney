@@ -10,7 +10,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, **Do's and Don'ts of working in a Space**, **Advanced GitHub Copilot features**, and **Applied GitHub Copilot techniques**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, **Do's and Don'ts of working in a Space**, **Advanced GitHub Copilot features**, **Applied GitHub Copilot techniques**, and **Code completion with GitHub Copilot**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -200,6 +200,17 @@ Apply implicit prompts and selectively provide context to work more effectively 
 - Make prompts more specific when needed, such as requiring a Python virtual environment in a generated Dockerfile; reword the request if suggestions miss the requirement.
 
 ### [GitHub Copilot Across Environments: IDE, Chat, GitHub.com, Command Line Techniques, and the GitHub Copilot App](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/)
+
+#### [Code completion with GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/2-code-completion-with-git-hub-copilot)
+
+Use context-aware IDE completions to draft code, compare alternatives, and follow the project's conventions.
+
+- Suggestions can complete a line or an entire block. Accept the whole suggestion, accept part, or ignore it; available controls depend on the editor and keybindings.
+- Hover over ghost text to reveal suggestion controls, then use the forward/backward arrows to compare alternatives. The documented shortcuts are `Alt+]` for next and `Alt+[` for previous on Windows/Linux, and `Option+]` / `Option+[` on macOS.
+- Existing code can guide method implementations, naming, formatting, comment style, and design patterns; these are context-based suggestions, not guaranteed enforcement.
+- Copilot interprets comment intent with natural-language processing and relates comments to surrounding code through contextual analysis.
+- Inline comments, block comments, Python docstrings, TODOs, and API documentation can guide completions. Comments can describe a function, clarify names, or specify an algorithm to influence the suggested implementation.
+- Copilot supports many languages and frameworks, including Python, JavaScript, Java, TypeScript, Ruby, Go, C#, and C++; that list is not exhaustive. Plan quotas in older training examples can change.
 
 ### [Management and customization considerations with GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/github-copilot-management-and-customizations/)
 
