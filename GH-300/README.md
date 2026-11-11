@@ -10,6 +10,8 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 ## Training Quiz
 
+Play online: [GH-300 | GitHub Copilot Practice Quiz](https://gh300-training-quiz.vercel.app/).
+
 The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, **Do's and Don'ts of working in a Space**, **Advanced GitHub Copilot features**, **Applied GitHub Copilot techniques**, and **Code completion with GitHub Copilot**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
