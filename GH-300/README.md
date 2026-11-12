@@ -12,7 +12,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 Play online: [GH-300 | GitHub Copilot Practice Quiz](https://gh300-training-quiz.vercel.app/).
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, **Do's and Don'ts of working in a Space**, **Advanced GitHub Copilot features**, **Applied GitHub Copilot techniques**, and **Code completion with GitHub Copilot**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, **Do's and Don'ts of working in a Space**, **Advanced GitHub Copilot features**, **Applied GitHub Copilot techniques**, **Code completion with GitHub Copilot**, **GitHub Copilot Chat**, and **GitHub Copilot on GitHub.com**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -213,6 +213,27 @@ Use context-aware IDE completions to draft code, compare alternatives, and follo
 - Copilot interprets comment intent with natural-language processing and relates comments to surrounding code through contextual analysis.
 - Inline comments, block comments, Python docstrings, TODOs, and API documentation can guide completions. Comments can describe a function, clarify names, or specify an algorithm to influence the suggested implementation.
 - Copilot supports many languages and frameworks, including Python, JavaScript, Java, TypeScript, Ruby, Go, C#, and C++; that list is not exhaustive. Plan quotas in older training examples can change.
+
+#### [GitHub Copilot Chat](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/3-git-hub-copilot-chat)
+
+Use Copilot Chat for conversational help with code generation, debugging, explanations, and focused follow-up requests.
+
+- Ask for help with complex code generation, errors, or understanding unfamiliar code; include the relevant code and error details so the response has useful context.
+- Scope a request to a specific file with a `#file:` reference, such as `#file:controller.js`.
+- Slash commands express task intent: `/doc` adds comments, `/explain` explains code, `/fix` proposes a fix, `/generate` creates code, `/optimize` suggests efficiency improvements, and `/tests` creates unit tests. Command availability can vary by client and version.
+- Use `@terminal` for terminal-related questions and `@vscode` for VS Code questions such as debugging or settings. These direct the chat context; they do not imply that suggested commands or changes are automatically executed.
+- In supported IDE integrations, thumbs-up/down controls let you rate a Chat suggestion as helpful or unhelpful. Treat feedback controls as product-specific rather than universal.
+
+#### [GitHub Copilot on GitHub.com](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/4-git-hub-copilot-github-web)
+
+GitHub.com surfaces Copilot assistance across repository, issue, pull request, discussion, review, and Actions workflows, subject to current product access and settings.
+
+- On repository pages, ask Copilot to explain code, describe project structure, or draft repository documentation.
+- In issues, use Copilot to break down a problem, brainstorm approaches, or clarify reproduction steps.
+- In pull requests and code review, Copilot can summarize changes, suggest improvements, help with merge-conflict resolution, draft review comments, and analyze security or performance concerns.
+- For a failed GitHub Actions workflow, ask Copilot to interpret logs, explain likely causes, and suggest reliability improvements.
+- GitHub.com Copilot tasks may run in the background. Treat generated summaries and recommendations as reviewable suggestions, not verified changes; current plan, policy, and interface determine which actions are available.
+- Older training examples include request-unit prices and model names that change over time; check current GitHub documentation for present-day billing and availability.
 
 ### [Management and customization considerations with GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/github-copilot-management-and-customizations/)
 
