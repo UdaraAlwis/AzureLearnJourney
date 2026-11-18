@@ -12,7 +12,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 Play online: [GH-300 | GitHub Copilot Practice Quiz](https://gh300-training-quiz.vercel.app/).
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, **Do's and Don'ts of working in a Space**, **Advanced GitHub Copilot features**, **Applied GitHub Copilot techniques**, **Code completion with GitHub Copilot**, **GitHub Copilot Chat**, and **GitHub Copilot on GitHub.com**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, **Do's and Don'ts of working in a Space**, **Advanced GitHub Copilot features**, **Applied GitHub Copilot techniques**, **Code completion with GitHub Copilot**, **GitHub Copilot Chat**, **GitHub Copilot on GitHub.com**, and **GitHub Copilot for the Command Line**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -234,6 +234,17 @@ GitHub.com surfaces Copilot assistance across repository, issue, pull request, d
 - For a failed GitHub Actions workflow, ask Copilot to interpret logs, explain likely causes, and suggest reliability improvements.
 - GitHub.com Copilot tasks may run in the background. Treat generated summaries and recommendations as reviewable suggestions, not verified changes; current plan, policy, and interface determine which actions are available.
 - Older training examples include request-unit prices and model names that change over time; check current GitHub documentation for present-day billing and availability.
+
+#### [GitHub Copilot for the Command Line](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/5-git-hub-copilot-for-the-command-line)
+
+Copilot CLI can explain shell commands, suggest commands from natural-language tasks, and revise suggestions in an interactive terminal session.
+
+- The unit shows Homebrew installation with `brew install copilot-cli`, launching interactive mode with `copilot`, and one-shot prompts with `copilot -i "..."`.
+- At first launch, CLI asks whether to trust the current folder because it may read, modify, or execute files there. Only trust directories whose contents and operations are appropriate for the session.
+- Use `@` to select a file as context. Use natural language to explain tasks or revise suggestions; slash commands control the session and its configuration.
+- Useful commands include `/help`, `/explain`, `/suggest`, `/revise`, `/feedback`, and `/exit`. `/model`, `/theme`, `/skills`, `/mcp`, `/list-dirs`, and `/reset-allowed-tools` manage settings or capabilities; slash commands are not interchangeable with task prompts.
+- CLI can suggest a shell command and ask whether to execute it. Inspect the proposed command and its target before approving execution.
+- The unit describes local sandboxing with `/sandbox enable` and a GitHub-hosted cloud sandbox started with `copilot --cloud`. Cloud sandbox use can depend on organization or enterprise policy. Verify current CLI syntax and availability because CLI features evolve.
 
 ### [Management and customization considerations with GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/github-copilot-management-and-customizations/)
 
