@@ -12,7 +12,7 @@ LEARNING PATH 2: [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microso
 
 Play online: [GH-300 | GitHub Copilot Practice Quiz](https://gh300-training-quiz.vercel.app/).
 
-The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, **Do's and Don'ts of working in a Space**, **Advanced GitHub Copilot features**, **Applied GitHub Copilot techniques**, **Code completion with GitHub Copilot**, **GitHub Copilot Chat**, **GitHub Copilot on GitHub.com**, and **GitHub Copilot for the Command Line**.
+The local quiz app includes original practice questions only for completed Microsoft Learn units and records GH-300 progress in your browser. It currently covers **Mitigate AI risks**, **Microsoft and GitHub's six principles of responsible AI**, **GitHub Copilot, your AI pair programmer**, **Interact with Copilot**, **Set up, configure, and troubleshoot GitHub Copilot**, **Prompt engineering foundations and best practices**, **GitHub Copilot user prompt process flow**, **GitHub Copilot data**, **GitHub Copilot Large Language Models (LLMs)**, **Introduction to Copilot Spaces**, **Sharing, discoverability, and governance**, **Do's and Don'ts of working in a Space**, **Advanced GitHub Copilot features**, **Applied GitHub Copilot techniques**, **Code completion with GitHub Copilot**, **GitHub Copilot Chat**, **GitHub Copilot on GitHub.com**, **GitHub Copilot for the Command Line**, and **The GitHub Copilot app**.
 
 From the `Training Quiz` folder, install dependencies and start the app:
 
@@ -245,6 +245,17 @@ Copilot CLI can explain shell commands, suggest commands from natural-language t
 - Useful commands include `/help`, `/explain`, `/suggest`, `/revise`, `/feedback`, and `/exit`. `/model`, `/theme`, `/skills`, `/mcp`, `/list-dirs`, and `/reset-allowed-tools` manage settings or capabilities; slash commands are not interchangeable with task prompts.
 - CLI can suggest a shell command and ask whether to execute it. Inspect the proposed command and its target before approving execution.
 - The unit describes local sandboxing with `/sandbox enable` and a GitHub-hosted cloud sandbox started with `copilot --cloud`. Cloud sandbox use can depend on organization or enterprise policy. Verify current CLI syntax and availability because CLI features evolve.
+
+#### [The GitHub Copilot app](https://learn.microsoft.com/en-us/training/modules/github-copilot-across-environments/5-1-github-copilot-app)
+
+The native desktop app for macOS, Windows, and Linux coordinates agent-assisted work from an issue or task through code review and pull-request completion.
+
+- Agent sessions are tied to a branch or pull request and isolated with Git worktrees, allowing multiple tasks to run in parallel without interfering.
+- Choose a session mode to match the needed oversight: **Interactive** collaborates step by step, **Plan** presents a plan for review before changes, and **Autopilot** performs well-defined work with minimal intervention.
+- The app is powered by the Copilot CLI runtime, so existing CLI tools, skills, and configuration can carry forward. It complements rather than replaces the IDE, CLI, or GitHub.com.
+- Use `/chronicle standup` to summarize recent work across sessions, or `/chronicle` to review past activity.
+- Voice dictation uses a local transcription model: configure its shortcut and microphone access, speak a prompt, then review or edit the transcription before submitting it.
+- App workflows include reviewing diffs, monitoring checks and CI, responding to feedback, and progressing pull requests. Agent Merge can help address review comments and failing checks; review proposed changes before merging.
 
 ### [Management and customization considerations with GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/github-copilot-management-and-customizations/)
 
